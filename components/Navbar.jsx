@@ -6,7 +6,7 @@ import Link from "next/link";
 import { HiMenu, HiX } from "react-icons/hi";
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] =useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -24,6 +24,7 @@ export default function Navbar() {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Courses", href: "/courses" },
+    { name: "Services", href: "/services" }, // ✅ Added
     { name: "About", href: "/about" },
     { name: "Blog", href: "/blog" },
     { name: "Fees Structure", href: "/fees-structure" },
