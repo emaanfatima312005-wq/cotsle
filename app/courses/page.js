@@ -297,6 +297,50 @@ export default function CoursesPage() {
   </div>
 
 </section>
+  
+{/* CTA Section */}
+
+<section 
+data-aos="zoom-in"
+className="py-24 bg-gradient-to-r from-white via-blue-50 to-white">
+
+  <div className="max-w-5xl mx-auto px-6 text-center">
+
+    <p className="text-[#0D6EFD] font-semibold uppercase tracking-widest mb-3">
+      Start Your Journey
+    </p>
+
+    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+      Ready to Build Your Future?
+    </h2>
+
+    <p className="text-gray-600 text-lg leading-8 max-w-3xl mx-auto mb-10">
+      Join Cotsle and gain the skills you need to succeed in today's technology
+      industry. Learn from experienced instructors through practical,
+      career-focused training programs.
+    </p>
+
+    <div className="flex flex-wrap justify-center gap-5">
+
+      <Link
+        href="/contact"
+        className="bg-[#0D6EFD] hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
+      >
+        Enroll Now
+      </Link>
+
+      <Link
+        href="/courses"
+        className="border-2 border-[#0D6EFD] text-[#0D6EFD] hover:bg-[#0D6EFD] hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+      >
+        Explore More Courses
+      </Link>
+
+    </div>
+
+  </div>
+
+</section>
 
       <Footer />
 
