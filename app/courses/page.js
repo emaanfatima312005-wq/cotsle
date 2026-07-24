@@ -75,10 +75,6 @@ export default function CoursesPage() {
 
             <div>
 
-              <span className="inline-block bg-blue-100 text-[#0D6EFD] font-semibold px-5 py-2 rounded-full mb-6">
-                📚 Our Courses
-              </span>
-
               <h1 className="text-5xl lg:text-6xl font-bold leading-tight text-gray-900 mb-6">
                 Learn Today's
                 <span className="text-[#0D6EFD]">
