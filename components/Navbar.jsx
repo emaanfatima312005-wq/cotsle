@@ -27,7 +27,7 @@ export default function Navbar() {
     { name: "Services", href: "/services" }, // ✅ Added
     { name: "About", href: "/about" },
     { name: "Blog", href: "/blog" },
-    { name: "Fees Structure", href: "/fees-structure" },
+    { name: "AI Advisor", href: "/AI Advisor" },
     { name: "Schedules", href: "/schedules" },
   ];
 
