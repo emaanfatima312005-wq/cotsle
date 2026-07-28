@@ -119,31 +119,27 @@ export default function Home() {
 
     {/* Hero Content */}
 
-    <div className="relative z-10 flex min-h-[85vh] flex-col items-center justify-center px-8 text-center">
+    <div className="relative z-10 flex min-h-[50vh] flex-col items-center justify-center px-8 text-center">
 
       <Image
         src="/images/logo2.png"
         alt="COTSLE Logo"
-        width={190}
-        height={190}
+        width={130}
+        height={130}
         priority
       />
-
-      <p className="mt-6 text-sm font-semibold uppercase tracking-[8px] text-[#0D6EFD]">
-        Technology Group
-      </p>
 
       <h1 className="mt-5 text-5xl font-black tracking-tight text-gray-900 sm:text-6xl lg:text-7xl">
         COTSLE
       </h1>
 
-      <p className="mt-8 max-w-3xl text-lg leading-9 text-gray-600">
+      <p className="mt-4 max-w-3xl text-lg leading-7 text-gray-600">
         Empowering students, professionals and businesses through
         cutting-edge education, enterprise technology solutions and
         AI-driven innovation.
       </p>
 
-      <div className="mt-10 h-1 w-24 rounded-full bg-[#0D6EFD]" />
+      <div className="mt-5 h-1 w-24 rounded-full bg-[#0D6EFD]" />
 
     </div>
 
