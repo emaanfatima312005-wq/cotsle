@@ -1,67 +1,155 @@
 import Link from "next/link";
 import Image from "next/image";
-import {
-  FaGraduationCap,
-  FaNetworkWired,
-  FaBrain,
-} from "react-icons/fa";
 
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50">
 
-      {/* Tech Grid */}
+      {/* ===================== PAGE BACKGROUND ===================== */}
+      
 
-      <div
-        className="absolute inset-0 opacity-[0.035]"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(13,110,253,.15) 1px, transparent 1px), linear-gradient(90deg, rgba(13,110,253,.15) 1px, transparent 1px)",
-          backgroundSize: "50px 50px",
-        }}
-      />
+{/* Main Gradient */}
+<section className="relative z-10 overflow-hidden px-6 pt-8">
 
-      {/* Blue Glow */}
+  <div className="relative w-full mx-auto">
 
-      <div className="absolute -top-40 -left-32 w-[500px] h-[500px] rounded-full bg-[#0D6EFD]/10 blur-[170px]" />
+    <div className="absolute inset-0 bg-gradient-to-br from-white via-[#F7FAFF] to-[#EAF3FF]" />
 
-      <div className="absolute bottom-0 right-0 w-[450px] h-[450px] rounded-full bg-blue-300/20 blur-[170px]" />
+{/* Building Background */}
+<div className="absolute inset-0 pointer-events-none">
 
+  <Image
+    src="/images/building.jpg"
+    alt=""
+    fill
+    priority
+    className="object-cover object-right opacity-[0.13]"
+  />
 
-      {/* HERO */}
+  {/* White Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-[#EDF5FF]/70" />
 
-      <section className="relative z-10 max-w-7xl mx-auto px-6 pt-24">
-        {/* Logo */}
-    <div className="flex justify-center">
+</div>
+
+{/* Top Right Glow */}
+
+<div className="absolute -top-32 right-[-140px] h-[520px] w-[520px] rounded-full bg-[#0D6EFD]/10 blur-[170px]" />
+
+{/* Bottom Left Glow */}
+
+<div className="absolute bottom-[-150px] left-[-120px] h-[420px] w-[420px] rounded-full bg-[#0D6EFD]/10 blur-[160px]" />
+
+{/* Decorative Circles */}
+
+<div className="absolute top-24 left-20 h-40 w-40 rounded-full border border-[#0D6EFD]/10" />
+
+<div className="absolute bottom-32 right-24 h-24 w-24 rounded-full border border-[#0D6EFD]/10" />
+
+{/* Dots Top Right */}
+
+<div className="absolute right-24 top-20 grid grid-cols-6 gap-3 opacity-40">
+
+  {Array.from({ length: 36 }).map((_, i) => (
+
+    <span
+      key={i}
+      className="h-1 w-1 rounded-full bg-[#0D6EFD]"
+    />
+
+  ))}
+
+</div>
+
+{/* Dots Bottom Left */}
+
+<div className="absolute bottom-24 left-24 grid grid-cols-6 gap-3 opacity-25">
+
+  {Array.from({ length: 36 }).map((_, i) => (
+
+    <span
+      key={i}
+      className="h-1 w-1 rounded-full bg-[#0D6EFD]"
+    />
+
+  ))}
+
+</div>
+
+{/* Thin Lines */}
+
+<div className="absolute top-0 right-0 h-full w-full opacity-5">
+
+  <svg
+    className="h-full w-full"
+    viewBox="0 0 1600 900"
+    fill="none"
+  >
+    <path
+      d="M1200 -50 C900 250 900 650 1450 950"
+      stroke="#0D6EFD"
+      strokeWidth="2"
+    />
+
+    <path
+      d="M1300 -50 C980 250 980 650 1550 950"
+      stroke="#0D6EFD"
+      strokeWidth="2"
+    />
+
+    <path
+      d="M1400 -50 C1050 250 1050 650 1650 950"
+      stroke="#0D6EFD"
+      strokeWidth="2"
+    />
+
+  </svg>
+
+</div>
+    {/* Right Background Graphic */}
+
+    <div className="absolute right-[-260px] top-1/2 h-[650px] w-[650px] -translate-y-1/2 rotate-12">
+
+      <div className="absolute h-full w-full rounded-[70px] border border-[#0D6EFD]/15" />
+
+      <div className="absolute left-10 top-10 h-[400px] w-[400px] rounded-[60px] border border-[#0D6EFD]/10" />
+
+      <div className="absolute left-20 top-20 h-[320px] w-[320px] rounded-[50px] border border-[#0D6EFD]/10" />
+
+    </div>
+
+    {/* Hero Content */}
+
+    <div className="relative z-10 flex min-h-[85vh] flex-col items-center justify-center px-8 text-center">
+
       <Image
         src="/images/logo2.png"
         alt="COTSLE Logo"
-        width={230}
-        height={230}
-        className="object-contain"
+        width={190}
+        height={190}
         priority
       />
+
+      <p className="mt-6 text-sm font-semibold uppercase tracking-[8px] text-[#0D6EFD]">
+        Technology Group
+      </p>
+
+      <h1 className="mt-5 text-5xl font-black tracking-tight text-gray-900 sm:text-6xl lg:text-7xl">
+        COTSLE
+      </h1>
+
+      <p className="mt-8 max-w-3xl text-lg leading-9 text-gray-600">
+        Empowering students, professionals and businesses through
+        cutting-edge education, enterprise technology solutions and
+        AI-driven innovation.
+      </p>
+
+      <div className="mt-10 h-1 w-24 rounded-full bg-[#0D6EFD]" />
+
     </div>
 
-        <div className="text-center">
+  </div>
 
-          <h1 className="mt-8 text-6xl md:text-8xl font-black tracking-tight text-gray-900">
-            COTSLE
-          </h1>
-
-         {/* <h2 className="mt-4 text-2xl md:text-3xl text-gray-600 font-light">
-            Education • Enterprise • Artificial Intelligence
-          </h2>*/}
-
-          <p className="mt-8 max-w-3xl mx-auto text-lg leading-9 text-gray-600">
-            Empowering students, professionals and businesses through
-            cutting-edge education, enterprise technology solutions and
-            AI-driven innovation.
-          </p>
-
-        </div>
-
-      </section>
+</section>
 
       {/* PANELS */}
 
@@ -213,6 +301,36 @@ export default function Home() {
       business, or leverage Artificial Intelligence, COTSLE has a
       dedicated division ready to help you succeed.
     </p>
+    {/* Thin Lines */}
+
+<div className="absolute top-0 right-0 h-full w-full opacity-5">
+
+  <svg
+    className="h-full w-full"
+    viewBox="0 0 1600 900"
+    fill="none"
+  >
+    <path
+      d="M1200 -50 C900 250 900 650 1450 950"
+      stroke="#0D6EFD"
+      strokeWidth="2"
+    />
+
+    <path
+      d="M1300 -50 C980 250 980 650 1550 950"
+      stroke="#0D6EFD"
+      strokeWidth="2"
+    />
+
+    <path
+      d="M1400 -50 C1050 250 1050 650 1650 950"
+      stroke="#0D6EFD"
+      strokeWidth="2"
+    />
+
+  </svg>
+
+</div>
 
     <div className="mt-10 flex flex-wrap justify-center gap-4">
 
@@ -245,6 +363,7 @@ export default function Home() {
       {/* Footer */}
 
       <footer className="relative z-10 border-t border-gray-200 py-8 text-center">
+        
 
         <h3 className="font-black text-xl text-gray-900">
           COTSLE
