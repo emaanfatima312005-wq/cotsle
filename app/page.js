@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   FaGraduationCap,
   FaNetworkWired,
@@ -26,23 +27,31 @@ export default function Home() {
 
       <div className="absolute bottom-0 right-0 w-[450px] h-[450px] rounded-full bg-blue-300/20 blur-[170px]" />
 
+
       {/* HERO */}
 
       <section className="relative z-10 max-w-7xl mx-auto px-6 pt-24">
+        {/* Logo */}
+    <div className="flex justify-center">
+      <Image
+        src="/images/logo2.png"
+        alt="COTSLE Logo"
+        width={230}
+        height={230}
+        className="object-contain"
+        priority
+      />
+    </div>
 
         <div className="text-center">
-
-          <p className="uppercase tracking-[8px] text-[#0D6EFD] font-semibold">
-            Technology Group
-          </p>
 
           <h1 className="mt-8 text-6xl md:text-8xl font-black tracking-tight text-gray-900">
             COTSLE
           </h1>
 
-          <h2 className="mt-4 text-2xl md:text-3xl text-gray-600 font-light">
+         {/* <h2 className="mt-4 text-2xl md:text-3xl text-gray-600 font-light">
             Education • Enterprise • Artificial Intelligence
-          </h2>
+          </h2>*/}
 
           <p className="mt-8 max-w-3xl mx-auto text-lg leading-9 text-gray-600">
             Empowering students, professionals and businesses through
@@ -63,127 +72,122 @@ export default function Home() {
           <div className="grid lg:grid-cols-3 gap-8">
 
             {/* ================= SYSTEMS ================= */}
-            <Link href="/systems">
+<Link href="/systems">
+  <div className="group relative overflow-hidden rounded-[34px] bg-gray-900 h-[600px] shadow-xl transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl cursor-pointer">
 
-            <div className="group relative overflow-hidden rounded-[34px] bg-gray-900 p-10 h-[520px] shadow-xl transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl cursor-pointer">
+    {/* Image */}
+    <div className="relative h-70 w-full">
+      <Image
+        src="/images/systems_cards.jpeg"
+        alt="Systems"
+        fill
+        className="object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+    </div>
 
-                <div className="absolute left-0 top-0 h-full w-0 bg-[#0D6EFD] transition-all duration-500 group-hover:w-2"></div>
+    {/* Content */}
+    <div className="p-8">
 
-                <span className="absolute right-6 top-4 text-[120px] font-black text-white/5">
-                  01
-                </span>
+      <p className="mt-5 uppercase tracking-[6px] text-[#4DA3FF] text-sm font-bold">
+        COTSLE
+      </p>
 
-                <div className="w-20 h-20 rounded-3xl bg-blue-50 flex items-center justify-center">
+      <h2 className="mt-2 text-4xl font-black text-white">
+        SYSTEMS
+      </h2>
 
-                  <FaGraduationCap className="text-4xl text-[#0D6EFD]" />
+      <p className="mt-5 text-gray-300 leading-7">
+        Professional IT education, certifications and hands-on
+        training for future technology leaders.
+      </p>
 
-                </div>
+      <div className="mt-8 text-[#4DA3FF] font-semibold group-hover:translate-x-2 transition-all">
+        Explore →
+      </div>
 
-                <p className="mt-8 uppercase tracking-[6px] text-[#0D6EFD] text-sm font-bold">
-                  COTSLE
-                </p>
+    </div>
 
-                <h2 className="mt-2 text-4xl font-black text-gray-900">
-                  SYSTEMS
-                </h2>
-
-                <p className="mt-6 leading-8 text-gray-600">
-                  Professional IT education, certifications and hands-on
-                  training for future technology leaders.
-                </p>
-
-
-                <div className="mt-12 text-[#0D6EFD] font-semibold group-hover:translate-x-2 transition-all">
-
-                  Explore →
-
-                </div>
-
-              </div>
-
-            </Link>
-
+  </div>
+</Link>
                        {/* ================= NETWORKS ================= */}
 
             <Link href="/networks">
+  <div className="group relative overflow-hidden rounded-[34px] bg-gray-900 h-[600px] shadow-xl transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl cursor-pointer">
 
-              <div className="group relative overflow-hidden rounded-[34px] bg-gray-900 p-10 h-[520px] shadow-xl transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl cursor-pointer">
+    {/* Image */}
+    <div className="relative h-70 w-full">
+      <Image
+        src="/images/networks_cards.jpeg"
+        alt="Networks"
+        fill
+        className="object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+    </div>
 
-                <div className="absolute left-0 top-0 h-full w-0 bg-[#0D6EFD] transition-all duration-500 group-hover:w-2"></div>
+    {/* Content */}
+    <div className="p-8">
 
-                <span className="absolute right-6 top-4 text-[120px] font-black text-white/5">
-                  02
-                </span>
+      <p className="mt-5 uppercase tracking-[6px] text-[#4DA3FF] text-sm font-bold">
+        COTSLE
+      </p>
 
-                <div className="w-20 h-20 rounded-3xl bg-white/10 flex items-center justify-center">
+      <h2 className="mt-2 text-4xl font-black text-white">
+        NETWORKS
+      </h2>
 
-                  <FaNetworkWired className="text-4xl text-[#4DA3FF]" />
+      <p className="mt-5 text-gray-300 leading-7">
+        Enterprise software, cloud infrastructure & cybersecurity
+        solutions for modern organizations.
+      </p>
 
-                </div>
+      <div className="mt-8 text-[#4DA3FF] font-semibold transition-all group-hover:translate-x-2">
+        Explore →
+      </div>
 
-                <p className="mt-8 uppercase tracking-[6px] text-[#4DA3FF] text-sm font-bold">
-                  COTSLE
-                </p>
+    </div>
 
-                <h2 className="mt-2 text-4xl font-black text-white">
-                  NETWORKS
-                </h2>
+  </div>
+</Link>
 
-                <p className="mt-6 leading-8 text-gray-300">
-                  Enterprise software, cloud infrastructure and cybersecurity
-                  solutions built for modern organizations.
-                </p>
+{/* ================= CONSULTING ================= */}
 
-                <div className="mt-12 text-[#4DA3FF] font-semibold group-hover:translate-x-2 transition-all">
+<Link href="/consulting">
+  <div className="group relative overflow-hidden rounded-[34px] bg-gray-900 h-[600px] shadow-xl transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl cursor-pointer">
 
-                  Explore →
+    {/* Image */}
+    <div className="relative h-70 w-full">
+      <Image
+        src="/images/consulting_cards.jpeg"
+        alt="Consulting"
+        fill
+        className="object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+    </div>
 
-                </div>
+    {/* Content */}
+    <div className="p-8">
 
-              </div>
+      <p className="mt-5 uppercase tracking-[6px] text-[#4DA3FF] text-sm font-bold">
+        COTSLE
+      </p>
 
-            </Link>
+      <h2 className="mt-2 text-4xl font-black text-white">
+        CONSULTING
+      </h2>
 
-            {/* ================= CONSULTING ================= */}
+      <p className="mt-5 text-gray-300 leading-7">
+        AI-powered consulting, intelligent assistants and learning
+        roadmaps that guide students and businesses.
+      </p>
 
-            <Link href="/consulting">
+      <div className="mt-8 text-[#4DA3FF] font-semibold transition-all group-hover:translate-x-2">
+        Explore →
+      </div>
 
-              <div className="group relative overflow-hidden rounded-[34px] bg-gray-900 p-10 h-[520px] shadow-xl transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl cursor-pointer">
+    </div>
 
-                <div className="absolute left-0 top-0 h-full w-0 bg-[#0D6EFD] transition-all duration-500 group-hover:w-2"></div>
-
-                <span className="absolute right-6 top-4 text-[120px] font-black text-white/5">
-                  03
-                </span>
-
-                <div className="w-20 h-20 rounded-3xl bg-blue-50 flex items-center justify-center">
-
-                  <FaBrain className="text-4xl text-[#0D6EFD]" />
-
-                </div>
-
-                <p className="mt-8 uppercase tracking-[6px] text-[#0D6EFD] text-sm font-bold">
-                  COTSLE
-                </p>
-
-                <h2 className="mt-2 text-4xl font-black text-gray-900">
-                  CONSULTING
-                </h2>
-
-                <p className="mt-6 leading-8 text-gray-600">
-                  AI-powered consulting, intelligent assistants and learning
-                  roadmaps that guide students and businesses.
-                </p>
-
-                <div className="mt-12 text-[#0D6EFD] font-semibold group-hover:translate-x-2 transition-all">
-
-                  Explore →
-
-                </div>
-
-              </div>
-
-            </Link>
+  </div>
+</Link>
 
           </div>
 
@@ -192,57 +196,51 @@ export default function Home() {
       </section>
 
             {/* Bottom Banner */}
+{/* Bottom CTA */}
+<section className="relative z-10 pb-20 px-6">
+  <div className="max-w-5xl mx-auto text-center">
 
-      <section className="relative z-10 pb-20 px-6">
+    <p className="uppercase tracking-[6px] text-[#4DA3FF] font-semibold">
+      One Technology Group
+    </p>
 
-        <div className="max-w-7xl mx-auto">
+    <h2 className="mt-5 text-4xl md:text-5xl font-black text-gray-900">
+      Three Specialized Divisions
+    </h2>
 
-          <div className="overflow-hidden rounded-[36px] bg-gradient-to-r from-gray-900 via-black to-gray-900 px-12 py-16 text-center shadow-2xl">
+    <p className="mt-6 text-lg leading-8 text-gray-600">
+      Whether you're looking to build your career, transform your
+      business, or leverage Artificial Intelligence, COTSLE has a
+      dedicated division ready to help you succeed.
+    </p>
 
-            <p className="uppercase tracking-[6px] text-[#4DA3FF] font-semibold">
-              One Technology Group
-            </p>
+    <div className="mt-10 flex flex-wrap justify-center gap-4">
 
-            <h2 className="mt-5 text-4xl md:text-5xl font-black text-white">
-              Three Specialized Divisions
-            </h2>
+      <Link
+        href="/systems"
+        className="rounded-full bg-[#0D6EFD] px-7 py-3 font-semibold text-white transition duration-300 hover:bg-blue-700"
+      >
+        Explore Systems
+      </Link>
 
-            <p className="mt-6 max-w-3xl mx-auto text-lg leading-8 text-gray-300">
-              Whether you're looking to build your career, transform your
-              business, or leverage Artificial Intelligence, COTSLE has a
-              dedicated division ready to help you succeed.
-            </p>
+      <Link
+        href="/networks"
+        className="rounded-full border border-[#0D6EFD] px-7 py-3 font-semibold text-[#0D6EFD] transition duration-300 hover:bg-[#0D6EFD] hover:text-white"
+      >
+        Explore Networks
+      </Link>
 
-            <div className="mt-10 flex flex-wrap justify-center gap-4">
+      <Link
+        href="/consulting"
+        className="rounded-full border border-[#0D6EFD] px-7 py-3 font-semibold text-[#0D6EFD] transition duration-300 hover:bg-[#0D6EFD] hover:text-white"
+      >
+        Explore Consulting
+      </Link>
 
-              <Link
-                href="/systems"
-                className="rounded-full bg-[#0D6EFD] px-7 py-3 font-semibold text-white transition hover:bg-blue-700"
-              >
-                Explore Systems
-              </Link>
+    </div>
 
-              <Link
-                href="/networks"
-                className="rounded-full border border-white/20 px-7 py-3 font-semibold text-white transition hover:border-[#0D6EFD]"
-              >
-                Explore Networks
-              </Link>
-
-              <Link
-                href="/consulting"
-                className="rounded-full border border-white/20 px-7 py-3 font-semibold text-white transition hover:border-[#0D6EFD]"
-              >
-                Explore Consulting
-              </Link>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
+  </div>
+</section>
 
       {/* Footer */}
 
