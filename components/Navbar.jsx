@@ -57,7 +57,7 @@ export default function Navbar() {
           />
 
           <h1 className="text-3xl font-bold">
-            Cotsle
+            COTSLE
           </h1>
 
         </Link>

@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import TopBar from "../../components/TopBar";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
+import TopBar from "../../../components/TopBar";
+import Navbar from "../../../components/Navbar";
+import Footer from "../../../components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 
