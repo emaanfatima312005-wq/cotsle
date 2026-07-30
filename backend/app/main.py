@@ -1,0 +1,36 @@
+from fastapi import FastAPI
+from sqlalchemy import text
+from app.database import Base, engine
+import app.models
+from app.database import engine
+from app.routes import contact
+
+Base.metadata.create_all(bind=engine)
+app = FastAPI(
+    title="COTSLE API",
+    version="1.0.0"
+)
+app.include_router(contact.router)
+
+
+@app.get("/")
+def home():
+    return {
+        "message": "COTSLE backend is running 🚀"
+    }
+
+
+@app.get("/db-test")
+def database_test():
+    try:
+        with engine.connect() as connection:
+            connection.execute(text("SELECT 1"))
+
+        return {
+            "database": "Connected successfully ✅"
+        }
+
+    except Exception as e:
+        return {
+            "error": str(e)
+        }
