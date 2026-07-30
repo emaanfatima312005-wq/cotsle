@@ -1,12 +1,16 @@
 from fastapi import FastAPI
 from sqlalchemy import text
-
+from app.database import Base, engine
+import app.models
 from app.database import engine
+from app.routes import contact
 
+Base.metadata.create_all(bind=engine)
 app = FastAPI(
     title="COTSLE API",
     version="1.0.0"
 )
+app.include_router(contact.router)
 
 
 @app.get("/")
