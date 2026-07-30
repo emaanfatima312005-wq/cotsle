@@ -6,7 +6,6 @@ import Inquiry from "../../components/systems/Inquiry";
 
 export default function Home() {
   return (
-    <AnimationProvider>
       <main>
         <Hero />
         <About />
@@ -14,6 +13,5 @@ export default function Home() {
         <WhyChoose />
         <Inquiry />
       </main>
-    </AnimationProvider>
   );
 }

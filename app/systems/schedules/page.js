@@ -1,9 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import TopBar from "../../../components/TopBar";
-import Navbar from "../../../components/Navbar";
-import Footer from "../../../components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -39,8 +36,6 @@ const faqs = [
 ];
   return (
     <>
-      <TopBar />
-      <Navbar />
 
       {/* Hero */}
 
@@ -79,7 +74,7 @@ const faqs = [
                 </Link>
 
                 <Link
-                  href="/contact"
+                  href="/systems/contact"
                   className="border border-gray-300 hover:border-[#0D6EFD] hover:text-[#0D6EFD] px-8 py-4 rounded-xl font-semibold transition-all duration-300"
                 >
                   Contact Us
@@ -503,8 +498,6 @@ const faqs = [
   </div>
 
 </section>
-
-      <Footer />
 
     </>
   );

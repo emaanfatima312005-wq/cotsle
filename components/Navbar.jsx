@@ -84,7 +84,7 @@ export default function Navbar() {
           </ul>
 
           <Link
-            href="/contact"
+            href="/systems/contact"
             className="bg-[#0D6EFD] hover:bg-blue-700 transition-all duration-300 px-6 py-3 rounded-md font-semibold"
           >
             Contact Us
@@ -133,7 +133,7 @@ export default function Navbar() {
             <li className="px-6 pt-4 pb-6">
 
               <Link
-                href="/contact"
+                href="/systems/contact"
                 onClick={() => setMenuOpen(false)}
                 className="block text-center bg-[#0D6EFD] hover:bg-blue-700 py-3 rounded-md font-semibold transition"
               >

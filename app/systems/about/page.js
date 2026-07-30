@@ -4,9 +4,6 @@ import {
   FaAward,
   FaGraduationCap,
 } from "react-icons/fa";
-import TopBar from "../../../components/TopBar";
-import Navbar from "../../../components/Navbar";
-import Footer from "../../../components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,8 +11,6 @@ import Link from "next/link";
 export default function AboutPage() {
   return (
     <>
-      <TopBar />
-      <Navbar />
 
       {/* Hero */}
 
@@ -52,14 +47,14 @@ export default function AboutPage() {
               <div className="flex flex-wrap gap-5">
 
                 <Link
-                  href="/courses"
+                  href="/systems/courses"
                   className="bg-[#0D6EFD] hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   Explore Courses
                 </Link>
 
                 <Link
-                  href="/contact"
+                  href="/systems/contact"
                   className="border-2 border-[#0D6EFD] text-[#0D6EFD] hover:bg-[#0D6EFD] hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300"
                 >
                   Contact Us
@@ -615,14 +610,14 @@ export default function AboutPage() {
     <div className="flex flex-wrap justify-center gap-5">
 
       <Link
-        href="/courses"
+        href="/systems/courses"
         className="bg-[#0D6EFD] hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
       >
         Explore Courses
       </Link>
 
       <Link
-        href="/contact"
+        href="systems/contact"
         className="border-2 border-[#0D6EFD] text-[#0D6EFD] hover:bg-[#0D6EFD] hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300"
       >
         Contact Us
@@ -633,8 +628,6 @@ export default function AboutPage() {
   </div>
 
 </section>
-
-      <Footer />
     </>
   );
 }

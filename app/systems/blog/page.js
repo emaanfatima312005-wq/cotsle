@@ -1,14 +1,9 @@
-import TopBar from "../../../components/TopBar";
-import Navbar from "../../../components/Navbar";
-import Footer from "../../../components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function BlogPage() {
   return (
     <>
-      <TopBar />
-      <Navbar />
 
       {/* Hero */}
 
@@ -48,7 +43,7 @@ export default function BlogPage() {
                 </Link>
 
                 <Link
-                  href="/contact"
+                  href="/systems/contact"
                   className="border border-gray-300 hover:border-[#0D6EFD] hover:text-[#0D6EFD] px-8 py-4 rounded-xl font-semibold transition-all duration-300"
                 >
                   Contact Us
@@ -110,10 +105,6 @@ export default function BlogPage() {
       />
 
       <div className="p-10">
-
-        <span className="bg-blue-100 text-[#0D6EFD] px-4 py-2 rounded-full font-semibold">
-          Artificial Intelligence
-        </span>
 
         <h3 className="text-4xl font-bold text-gray-900 mt-6 mb-6">
           How Artificial Intelligence Is Transforming Modern Businesses
@@ -451,9 +442,6 @@ export default function BlogPage() {
   </div>
 
 </section>
-
-      <Footer />
-
     </>
   );
 }

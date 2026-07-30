@@ -1,6 +1,3 @@
-import TopBar from "../../../components/TopBar";
-import Navbar from "../../../components/Navbar";
-import Footer from "../../../components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -13,8 +10,6 @@ import {
 export default function ContactPage() {
   return (
     <>
-      <TopBar />
-      <Navbar />
 
       {/* Hero */}
 
@@ -57,7 +52,7 @@ export default function ContactPage() {
                 </Link>
 
                 <Link
-                  href="/services"
+                  href="/systems/services"
                   className="border border-gray-300 hover:border-[#0D6EFD] hover:text-[#0D6EFD] px-8 py-4 rounded-xl font-semibold transition-all duration-300"
                 >
                   Our Services
@@ -441,8 +436,6 @@ export default function ContactPage() {
   </div>
 
 </section>
-
-      <Footer />
 
     </>
   );
