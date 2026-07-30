@@ -1,6 +1,3 @@
-import TopBar from "../../../components/TopBar";
-import Navbar from "../../../components/Navbar";
-import Footer from "../../../components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -64,8 +61,6 @@ export default function CoursesPage() {
 
   return (
     <>
-      <TopBar />
-      <Navbar />
 
       {/* Hero */}
 
@@ -338,7 +333,6 @@ className="py-24 bg-gradient-to-r from-white via-blue-50 to-white">
 
 </section>
 
-      <Footer />
 
     </>
   );
