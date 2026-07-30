@@ -36,14 +36,14 @@ export default function Hero() {
             <div className="flex flex-wrap gap-5 mb-12">
 
               <Link
-                href="/courses"
+                href="/systems/courses"
                 className="bg-[#0D6EFD] hover:bg-blue-700 transition-all duration-300 px-8 py-4 rounded-lg font-semibold hover:scale-105"
               >
                 Explore Courses
               </Link>
 
               <Link
-                href="/contact"
+                href="/systems/contact"
                 className="border border-white hover:bg-white hover:text-black transition-all duration-300 px-8 py-4 rounded-lg font-semibold hover:scale-105"
               >
                 Contact Us

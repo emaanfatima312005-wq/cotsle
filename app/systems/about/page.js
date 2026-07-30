@@ -617,7 +617,7 @@ export default function AboutPage() {
       </Link>
 
       <Link
-        href="systems/contact"
+        href="/systems/contact"
         className="border-2 border-[#0D6EFD] text-[#0D6EFD] hover:bg-[#0D6EFD] hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300"
       >
         Contact Us

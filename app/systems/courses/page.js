@@ -3,61 +3,61 @@ import Link from "next/link";
 
 export default function CoursesPage() {
   const courses = [
-    {
-      title: "Python Development",
-      image: "/images/python.jpg",
-      category: "Programming",
-      duration: "3 Months",
-      level: "Beginner",
-      description:
-        "Learn Python from beginner to advanced with practical projects.",
-    },
-    {
-      title: "Web Development",
-      image: "/images/web.jpg",
-      category: "Development",
-      duration: "4 Months",
-      level: "Intermediate",
-      description:
-        "Master HTML, CSS, JavaScript, React and modern web technologies.",
-    },
-    {
-      title: "AI & Machine Learning",
-      image: "/images/ai.jpg",
-      category: "Artificial Intelligence",
-      duration: "5 Months",
-      level: "Advanced",
-      description:
-        "Explore Machine Learning, Deep Learning and modern AI tools.",
-    },
-    {
-      title: "Cyber Security",
-      image: "/images/cyber.jpg",
-      category: "Security",
-      duration: "4 Months",
-      level: "Intermediate",
-      description:
-        "Learn ethical hacking, penetration testing, network security and cyber defense.",
-    },
-    {
-      title: "Cloud Computing",
-      image: "/images/cloud.jpg",
-      category: "Cloud Computing",
-      duration: "3 Months",
-      level: "Intermediate",
-      description:
-        "Master AWS, Microsoft Azure, cloud infrastructure and cloud deployment.",
-    },
-    {
-      title: "Network Administration",
-      image: "/images/network.jpg",
-      category: "Networking",
-      duration: "4 Months",
-      level: "Beginner",
-      description:
-        "Learn Cisco networking, routing, switching and network management.",
-    },
-  ];
+  {
+    title: "Python Development",
+    image: "/images/python.jpeg",
+    duration: "3 Months",
+    level: "Beginner",
+    description:
+      "Learn Python from beginner to advanced with practical projects.",
+    link: "/systems/courses/python",
+  },
+  {
+    title: "Web Development",
+    image: "/images/web.jpeg",
+    duration: "4 Months",
+    level: "Intermediate",
+    description:
+      "Master HTML, CSS, JavaScript, React and modern web technologies.",
+    link: "/systems/courses/web-development",
+  },
+  {
+    title: "AI & Machine Learning",
+    image: "/images/ai.jpeg",
+    duration: "5 Months",
+    level: "Advanced",
+    description:
+      "Explore Machine Learning, Deep Learning and modern AI tools.",
+    link: "/systems/courses/ai",
+  },
+  {
+    title: "Cyber Security",
+    image: "/images/cyber.jpeg",
+    duration: "4 Months",
+    level: "Intermediate",
+    description:
+      "Learn ethical hacking, penetration testing, network security and cyber defense.",
+    link: "/systems/courses/cyber-security",
+  },
+  {
+    title: "Cloud Computing",
+    image: "/images/cloud.jpeg",
+    duration: "3 Months",
+    level: "Intermediate",
+    description:
+      "Master AWS, Microsoft Azure, cloud infrastructure and cloud deployment.",
+    link: "/systems/courses/cloud-computing",
+  },
+  {
+    title: "Network Administration",
+    image: "/images/network.jpeg",
+    duration: "4 Months",
+    level: "Beginner",
+    description:
+      "Learn Cisco networking, routing, switching and network management.",
+    link: "/systems/courses/network-administration",
+  },
+];
 
   return (
     <>
@@ -93,7 +93,7 @@ export default function CoursesPage() {
                 </Link>
 
                 <Link
-                  href="/contact"
+                  href="/systems/contact"
                   className="border-2 border-[#0D6EFD] text-[#0D6EFD] hover:bg-[#0D6EFD] hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300"
                 >
                   Contact Us
@@ -150,61 +150,56 @@ export default function CoursesPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            {courses.map((course, index) => (
+  {courses.map((course, index) => (
 
-              <div
-                key={index}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-300 overflow-hidden"
-              >
+    <div
+      key={index}
+      className="bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-300 overflow-hidden"
+    >
 
-                <Image
-                  src={course.image}
-                  alt={course.title}
-                  width={500}
-                  height={300}
-                  className="w-full h-56 object-cover"
-                />
+      <Image
+        src={course.image}
+        alt={course.title}
+        width={500}
+        height={300}
+        className="w-full h-56 object-cover"
+      />
 
-                <div className="p-7">
+      <div className="p-7">
 
-                  <span className="bg-blue-100 text-[#0D6EFD] text-sm px-3 py-1 rounded-full font-semibold">
-                    {course.category}
-                  </span>
+        <h3 className="text-2xl font-bold">
+          {course.title}
+        </h3>
 
-                  <h3 className="text-2xl font-bold mt-5">
-                    {course.title}
-                  </h3>
+        <p className="text-gray-600 mt-4 leading-7">
+          {course.description}
+        </p>
 
-                  <p className="text-gray-600 mt-4 leading-7">
-                    {course.description}
-                  </p>
+        <div className="flex justify-between mt-8">
 
-                  <div className="flex justify-between mt-8">
+          <span className="font-semibold">
+            ⏱ {course.duration}
+          </span>
 
-                    <span className="font-semibold">
-                      ⏱ {course.duration}
-                    </span>
+          <span className="text-[#0D6EFD] font-semibold">
+            {course.level}
+          </span>
 
-                    <span className="text-[#0D6EFD] font-semibold">
-                      {course.level}
-                    </span>
+        </div>
 
-                  </div>
+        <Link href={course.link}>
+          <button className="mt-8 w-full bg-[#0D6EFD] hover:bg-blue-700 text-white py-3 rounded-lg transition-all duration-300">
+            Learn More
+          </button>
+        </Link>
 
-                  <button
-                    className="mt-8 w-full bg-[#0D6EFD] hover:bg-blue-700 text-white py-3 rounded-lg transition-all duration-300"
-                  >
-                    Learn More
-                  </button>
+      </div>
 
-                </div>
+    </div>
 
-              </div>
+  ))}
 
-            ))}
-
-          </div>
-
+</div>
         </div>
 
         </section>
@@ -314,14 +309,14 @@ className="py-24 bg-gradient-to-r from-white via-blue-50 to-white">
     <div className="flex flex-wrap justify-center gap-5">
 
       <Link
-        href="/contact"
+        href="/systems/contact"
         className="bg-[#0D6EFD] hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
       >
         Enroll Now
       </Link>
 
       <Link
-        href="/courses"
+        href="/systems/courses"
         className="border-2 border-[#0D6EFD] text-[#0D6EFD] hover:bg-[#0D6EFD] hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300"
       >
         Explore More Courses
