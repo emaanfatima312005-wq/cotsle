@@ -87,7 +87,7 @@ export default function About() {
             <div className="flex justify-center lg:justify-start">
 
               <Link
-                href="/about"
+                href="/systems/about"
                 className="bg-[#0D6EFD] hover:bg-blue-700 text-white px-8 py-4 rounded-lg transition-all duration-300 font-semibold"
               >
                 Learn More

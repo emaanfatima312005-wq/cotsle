@@ -6,46 +6,53 @@ import {
   FaMobileAlt,
   FaGraduationCap,
 } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Services() {
   const services = [
-    {
-      icon: <FaLaptopCode />,
-      title: "Web Development",
-      description:
-        "Modern websites and web applications built with the latest technologies.",
-    },
-    {
-      icon: <FaRobot />,
-      title: "AI Solutions",
-      description:
-        "Intelligent automation and AI-powered business solutions.",
-    },
-    {
-      icon: <FaCloud />,
-      title: "Cloud Computing",
-      description:
-        "Scalable cloud infrastructure and deployment services.",
-    },
-    {
-      icon: <FaShieldAlt />,
-      title: "Cyber Security",
-      description:
-        "Protecting businesses with advanced security solutions.",
-    },
-    {
-      icon: <FaMobileAlt />,
-      title: "Mobile Apps",
-      description:
-        "Cross-platform mobile applications for Android and iOS.",
-    },
-    {
-      icon: <FaGraduationCap />,
-      title: "IT Training",
-      description:
-        "Professional training programs for modern technologies.",
-    },
-  ];
+  {
+    icon: <FaLaptopCode />,
+    title: "Web Development",
+    description:
+      "Modern websites and web applications built with the latest technologies.",
+    link: "/systems/courses/web-development",
+  },
+  {
+    icon: <FaRobot />,
+    title: "AI Solutions",
+    description:
+      "Intelligent automation and AI-powered business solutions.",
+    link: "/systems/courses/ai",
+  },
+  {
+    icon: <FaCloud />,
+    title: "Cloud Computing",
+    description:
+      "Scalable cloud infrastructure and deployment services.",
+    link: "/systems/courses/cloud-computing",
+  },
+  {
+    icon: <FaShieldAlt />,
+    title: "Cyber Security",
+    description:
+      "Protecting businesses with advanced security solutions.",
+    link: "/systems/courses/cyber-security",
+  },
+  {
+    icon: <FaMobileAlt />,
+    title: "Python Programming",
+    description:
+      "Develop fully functional web apps using Python programming.",
+    link: "/systems/courses/python",
+  },
+  {
+    icon: <FaGraduationCap />,
+    title: "Network Adminstration",
+    description:
+      "Professional training programs for modern technologies.",
+    link: "/systems/courses/network-administration",
+  },
+];
 
   return (
     <section
@@ -59,7 +66,7 @@ export default function Services() {
         <div className="text-center mb-16">
 
           <p className="text-[#0D6EFD] font-semibold uppercase tracking-widest mb-3">
-            Our Services
+            Our Courses
           </p>
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
@@ -79,24 +86,26 @@ export default function Services() {
 
           {services.map((service, index) => (
 
-            <div
-              key={index}
-              className="
-                group
-                bg-white
-                p-8
-                rounded-2xl
-                border
-                shadow-md
-                cursor-pointer
-                hover:border-[#0D6EFD]
-                hover:shadow-2xl
-                hover:-translate-y-3
-                transition-all
-                duration-500
-                ease-in-out
-              "
-            >
+            <Link
+  key={index}
+  href={service.link}
+  className="
+    group
+    block
+    bg-white
+    p-8
+    rounded-2xl
+    border
+    shadow-md
+    cursor-pointer
+    hover:border-[#0D6EFD]
+    hover:shadow-2xl
+    hover:-translate-y-3
+    transition-all
+    duration-500
+    ease-in-out
+  "
+>
 
               {/* Icon */}
 
@@ -121,7 +130,7 @@ export default function Services() {
 
               {/* Description */}
 
-              <p className="text-gray-600 leading-7">
+              <p className="text-gray-600 leading-7"> 
                 {service.description}
               </p>
 
@@ -143,7 +152,7 @@ export default function Services() {
                 Learn More →
               </div>
 
-            </div>
+            </Link>
 
           ))}
 
