@@ -2,7 +2,7 @@ import Hero from "../../components/systems/Hero";
 import About from "../../components/systems/About";
 import Services from "../../components/systems/Services";
 import WhyChoose from "../../components/systems/WhyChoose";
-import LearningExperience from "../../components/systems/LearningExperience";
+import Testimonials from "../../components/systems/Testimonials";
 import Inquiry from "../../components/systems/Inquiry";
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
         <About />
         <Services />
         <WhyChoose />
-        <LearningExperience />
+        <Testimonials />
         <Inquiry />
       </main>
   );
