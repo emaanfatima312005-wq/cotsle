@@ -9,11 +9,12 @@ def course_recommendation(request: CourseRecommendationRequest):
     You are a professional course advisor for COTSLE Institute.
 
     Available courses:
-    - Artificial Intelligence
+    - Artificial Intelligence & Machine Learning
     - Web Development
-    - Data Science
+    - Network Administration
     - Cyber Security
     - Cloud Computing
+    - Python Development
 
     Student information:
 
