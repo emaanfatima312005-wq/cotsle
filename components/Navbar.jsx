@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { HiMenu, HiX } from "react-icons/hi";
@@ -8,6 +9,7 @@ import { HiMenu, HiX } from "react-icons/hi";
 export default function Navbar() {
   const [scrolled, setScrolled] =useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     function handleScroll() {
@@ -42,7 +44,10 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
 
         {/* Left Side */}
-        <Link href="/" className="flex items-center gap-3">
+       <Link
+  href="/"
+  className="group flex items-center gap-3"
+>
 
           <Image
             src="/images/logo.png"
@@ -55,10 +60,10 @@ export default function Navbar() {
                 : "w-[150px]"
             }`}
           />
-
-          <h1 className="text-3xl font-bold">
-            COTSLE
-          </h1>
+<h1 className="text-3xl font-bold transition-colors duration-300 group-hover:text-[#0D6EFD]">
+  COTSLE
+</h1>
+          
 
         </Link>
 
@@ -72,11 +77,32 @@ export default function Navbar() {
 
               <li key={link.name}>
                 <Link
-                  href={link.href}
-                  className="hover:text-[#0D6EFD] transition-colors duration-300"
-                >
-                  {link.name}
-                </Link>
+  href={link.href}
+  className={`relative pb-2 transition-all duration-300
+
+    ${
+      pathname === link.href
+        ? "text-[#0D6EFD]"
+        : "text-white hover:text-[#0D6EFD]"
+    }
+
+    after:absolute
+    after:left-0
+    after:-bottom-1
+    after:h-[2px]
+    after:bg-[#0D6EFD]
+    after:transition-all
+    after:duration-300
+
+    ${
+      pathname === link.href
+        ? "after:w-full"
+        : "after:w-0 hover:after:w-full"
+    }
+  `}
+>
+  {link.name}
+</Link>
               </li>
 
             ))}

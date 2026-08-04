@@ -40,7 +40,7 @@ export default function Footer() {
                 </h2>
 
                 <p className="text-gray-400 text-sm">
-                  SOLUTIONS
+                  Systems
                 </p>
 
               </div>
@@ -55,19 +55,39 @@ export default function Footer() {
 
             <div className="flex gap-4">
 
-              {[FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp].map(
-                (Icon, index) => (
-                  <Link
-                    key={index}
-                    href="#"
-                    className="w-10 h-10 rounded-full bg-gray-800 hover:bg-[#0D6EFD] flex items-center justify-center transition-all duration-300"
-                  >
-                    <Icon />
-                  </Link>
-                )
-              )}
+  <Link
+    href="https://facebook.com"
+    target="_blank"
+    className="w-10 h-10 rounded-full bg-gray-800 hover:bg-[#0D6EFD] flex items-center justify-center transition"
+  >
+    <FaFacebookF />
+  </Link>
 
-            </div>
+  <Link
+    href="https://instagram.com"
+    target="_blank"
+    className="w-10 h-10 rounded-full bg-gray-800 hover:bg-[#0D6EFD] flex items-center justify-center transition"
+  >
+    <FaInstagram />
+  </Link>
+
+  <Link
+    href="https://youtube.com"
+    target="_blank"
+    className="w-10 h-10 rounded-full bg-gray-800 hover:bg-[#0D6EFD] flex items-center justify-center transition"
+  >
+    <FaYoutube />
+  </Link>
+
+  <Link
+    href="https://wa.me/923001234567"
+    target="_blank"
+    className="w-10 h-10 rounded-full bg-gray-800 hover:bg-[#0D6EFD] flex items-center justify-center transition"
+  >
+    <FaWhatsapp />
+  </Link>
+
+</div>
 
           </div>
 
@@ -81,44 +101,87 @@ export default function Footer() {
 
             <ul className="space-y-3 text-gray-400">
 
-              {[
-                "Home",
-                "Courses",
-                "About",
-                "Blog",
-                "Contact",
-              ].map((item) => (
-                <li key={item}>
-                  <Link
-                    href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                    className="hover:text-[#0D6EFD] transition"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
+  <li>
+    <Link href="/systems" className="hover:text-[#0D6EFD] transition">
+      Home
+    </Link>
+  </li>
 
-            </ul>
+  <li>
+    <Link href="/systems/courses" className="hover:text-[#0D6EFD] transition">
+      Courses
+    </Link>
+  </li>
+
+  <li>
+    <Link href="/systems/about" className="hover:text-[#0D6EFD] transition">
+      About
+    </Link>
+  </li>
+
+  <li>
+    <Link href="/systems/blog" className="hover:text-[#0D6EFD] transition">
+      Blog
+    </Link>
+  </li>
+
+  <li>
+    <Link href="/systems/contact" className="hover:text-[#0D6EFD] transition">
+      Contact
+    </Link>
+  </li>
+
+</ul>
 
           </div>
 
-          {/* Services */}
+          {/* Courses */}
 
           <div>
 
             <h3 className="text-xl font-semibold mb-6">
-              Services
+              Courses
             </h3>
 
             <ul className="space-y-3 text-gray-400">
 
-              <li>Web Development</li>
-              <li>Artificial Intelligence</li>
-              <li>Cloud Computing</li>
-              <li>Cyber Security</li>
-              <li>IT Training</li>
+  <li>
+    <Link href="/systems/courses/web-development" className="hover:text-[#0D6EFD] transition">
+      Web Development
+    </Link>
+  </li>
 
-            </ul>
+  <li>
+    <Link href="/systems/courses/ai" className="hover:text-[#0D6EFD] transition">
+      Artificial Intelligence
+    </Link>
+  </li>
+
+  <li>
+    <Link href="/systems/courses/cloud-computing" className="hover:text-[#0D6EFD] transition">
+      Cloud Computing
+    </Link>
+  </li>
+
+  <li>
+    <Link href="/systems/courses/cyber-security" className="hover:text-[#0D6EFD] transition">
+      Cyber Security
+    </Link>
+  </li>
+
+  <li>
+    <Link href="/systems/courses/python" className="hover:text-[#0D6EFD] transition">
+      Python Programming
+    </Link>
+  </li>
+
+  <li>
+    <Link href="/systems/courses/network-administration" className="hover:text-[#0D6EFD] transition">
+      Network Administration
+    </Link>
+  </li>
+
+</ul>
 
           </div>
 
@@ -163,9 +226,9 @@ export default function Footer() {
 
           <div className="flex gap-6">
 
-            <Link href="#">Privacy Policy</Link>
+            <Link href="/systems/privacy-policy">Privacy Policy</Link>
 
-            <Link href="#">Terms & Conditions</Link>
+<Link href="/systems/terms-and-conditions">Terms & Conditions</Link>
 
           </div>
 
