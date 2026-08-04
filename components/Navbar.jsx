@@ -31,6 +31,7 @@ export default function Navbar() {
     { name: "Blog", href: "/systems/blog" },
     { name: "AI Advisor", href: "/systems/AI Advisor" },
     { name: "Schedules", href: "/systems/schedules" },
+    { name: "AIIMS", href: "/systems/aiims" },
   ];
 
   return (
