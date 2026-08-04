@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from app.schemas.system_ai import (
+from app.schemas.systems_ai import (
     PromptRequest,
     CourseRecommendationRequest,
     ChatRequest,
@@ -12,8 +12,8 @@ from app.services.ai_service import generate_response
 
 
 router = APIRouter(
-    prefix="/ai",
-    tags=["AI"]
+    prefix="/systems/ai",
+    tags=["Systems AI"]
 )
 
 
