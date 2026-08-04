@@ -1,6 +1,10 @@
 from pydantic import BaseModel
 
 
+class PromptRequest(BaseModel):
+    prompt: str
+
+
 class CourseRecommendationRequest(BaseModel):
     interest: str
     current_level: str

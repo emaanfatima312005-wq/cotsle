@@ -4,7 +4,7 @@ from app.database import Base, engine
 import app.models
 from app.database import engine
 from app.routes import contact
-from app.routes import ai
+from app.routes import system_ai
 
 Base.metadata.create_all(bind=engine)
 app = FastAPI(
@@ -12,7 +12,7 @@ app = FastAPI(
     version="1.0.0"
 )
 app.include_router(contact.router)
-app.include_router(ai.router)
+app.include_router(system_ai.router)
 
 
 @app.get("/")
