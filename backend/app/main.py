@@ -6,6 +6,7 @@ from app.database import engine
 from app.routes import contact
 from app.routes import systems_ai
 from app.routes import networks_ai
+from app.routes import consulting_ai
 
 Base.metadata.create_all(bind=engine)
 app = FastAPI(
@@ -15,6 +16,7 @@ app = FastAPI(
 app.include_router(contact.router)
 app.include_router(systems_ai.router)
 app.include_router(networks_ai.router)
+app.include_router(consulting_ai.router)
 
 
 @app.get("/")
