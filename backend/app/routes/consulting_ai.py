@@ -6,6 +6,8 @@ from app.schemas.consulting_ai import ReadinessRequest
 from app.prompts.consulting_prompts import build_readiness_prompt
 from app.schemas.consulting_ai import UseCaseRequest
 from app.prompts.consulting_prompts import build_use_case_prompt
+from app.schemas.consulting_ai import TransformationRoadmapRequest
+from app.prompts.consulting_prompts import build_transformation_prompt
 
 router = APIRouter(
     prefix="/consulting/ai",
@@ -43,4 +45,15 @@ def ai_use_cases(request: UseCaseRequest):
 
     return {
         "use_cases": answer
+    }
+
+@router.post("/transformation-roadmap")
+def transformation_roadmap(request: TransformationRoadmapRequest):
+
+    prompt = build_transformation_prompt(request)
+
+    answer = generate_response(prompt)
+
+    return {
+        "roadmap": answer
     }

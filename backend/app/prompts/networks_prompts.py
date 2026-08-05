@@ -64,32 +64,25 @@ from app.schemas.networks_ai import TechStackAdvisorRequest
 
 def build_tech_stack_prompt(request: TechStackAdvisorRequest):
 
-    return f"""
-You are a senior software architect.
+ return f"""
+You are a senior software architecture consultant.
 
-Recommend the best technology stack for this project.
+The client has described their business below.
 
-Project Type:
-{request.project_type}
+Analyze the information and recommend the best technologies.
 
-Budget:
-{request.budget}
+Client Description:
 
-Scalability Requirement:
-{request.scalability}
+{request.prompt}
 
-Platform:
-{request.platform}
+Include:
 
-Provide:
+1. Business Summary
+2. Recommended Technology Stack
+3. Why these technologies fit
+4. Suggested Architecture
+5. Scalability Recommendations
+6. Final Advice
 
-1. Frontend framework
-2. Backend framework
-3. Database
-4. Authentication method
-5. Cloud/Hosting recommendation
-6. Deployment strategy
-7. Explain why each technology is recommended.
-
-Keep the response practical and professional.
+Write professionally using headings and bullet points.
 """

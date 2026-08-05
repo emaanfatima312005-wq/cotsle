@@ -8,17 +8,7 @@ You are a senior AI strategy consultant.
 
 Company Information
 
-Industry:
-{request.industry}
-
-Company Size:
-{request.company_size}
-
-Current Challenge:
-{request.current_challenge}
-
-Business Goal:
-{request.business_goal}
+{request.prompt}
 
 Prepare a professional AI consulting report including:
 
@@ -42,17 +32,7 @@ You are an AI transformation consultant.
 
 Assess how ready this company is to adopt Artificial Intelligence.
 
-Company Size:
-{request.company_size}
-
-Current Technology:
-{request.current_technology}
-
-AI Experience:
-{request.ai_experience}
-
-Available Data:
-{request.available_data}
+{request.prompt}
 
 Generate a professional report including:
 
@@ -76,11 +56,7 @@ You are an AI business consultant.
 
 The client has provided:
 
-Industry:
-{request.industry}
-
-Business Problem:
-{request.business_problem}
+{request.prompt}
 
 Suggest AI use cases that can solve this problem.
 
@@ -95,4 +71,29 @@ For each use case provide:
 Suggest at least 5 AI use cases.
 
 Keep the response professional and practical.
+"""
+
+from app.schemas.consulting_ai import TransformationRoadmapRequest
+
+
+def build_transformation_prompt(request: TransformationRoadmapRequest):
+
+    return f"""
+You are a digital transformation consultant.
+
+Create a Digital Transformation Roadmap.
+
+{request.prompt}
+
+Generate:
+
+1. Current Assessment
+2. Phase 1
+3. Phase 2
+4. Phase 3
+5. Recommended Technologies
+6. Expected Business Benefits
+7. Possible Risks
+
+Write professionally with headings and bullet points.
 """
