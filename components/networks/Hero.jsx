@@ -77,7 +77,7 @@ export default function Hero() {
             <div className="absolute h-[500px] w-[500px] rounded-full bg-[#0D6EFD]/20 blur-[120px]" />
 
             <Image
-              src="/images/network-hero.png"
+              src="/images/networks-hero.png"
               width={700}
               height={700}
               alt="Network"
