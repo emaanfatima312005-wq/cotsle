@@ -22,6 +22,8 @@ def generate_response(prompt: str):
         try:
             response = client.chat.completions.create(
                 model=model,
+                temperature=0.7,
+                max_tokens=2000,
                 messages=[
                     {
                         "role": "user",
@@ -29,11 +31,11 @@ def generate_response(prompt: str):
                     }
                 ]
             )
-
+            print(f"✅ Using model: {model}")
             return response.choices[0].message.content
 
         except Exception as e:
-            print(f"{model} failed:", e)
+            print(f"❌ {model} failed: {e}")
 
 
     return "AI service is currently unavailable."

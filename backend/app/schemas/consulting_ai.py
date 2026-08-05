@@ -2,28 +2,19 @@ from pydantic import BaseModel
 
 
 class StrategyRequest(BaseModel):
-    industry: str
-    company_size: str
-    current_challenge: str
-    business_goal: str
+    prompt:str
 
 
 class ReadinessRequest(BaseModel):
-    company_size: str
-    current_technology: str
-    ai_experience: str
-    available_data: str
+    prompt:str
 
 
 class UseCaseRequest(BaseModel):
-    industry: str
-    business_problem: str
+    prompt:str
 
-class ReadinessRequest(BaseModel):
-    company_size: str
-    current_technology: str
-    ai_experience: str
-    available_data: str
+
+class TransformationRoadmapRequest(BaseModel):
+    prompt:str
 
 
 class PromptRequest(BaseModel):
