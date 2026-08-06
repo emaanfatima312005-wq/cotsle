@@ -278,9 +278,9 @@ export default function Hero() {
       <div className="order-2 lg:order-1 flex justify-center">
 
         <img
-          src="/images/security.svg"
+          src="/images/security.png"
           alt="Cyber Security"
-          className="w-full max-w-md"
+          className="w-full max-w-md h-[500px] object-contain"
         />
 
       </div>
