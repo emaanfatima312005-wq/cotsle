@@ -13,10 +13,7 @@ class ProjectEstimatorRequest(BaseModel):
     timeline: str
 
 class TechStackAdvisorRequest(BaseModel):
-    project_type: str
-    budget: str
-    scalability: str
-    platform: str
+    prompt:str
 
 class PromptRequest(BaseModel):
     prompt: str
