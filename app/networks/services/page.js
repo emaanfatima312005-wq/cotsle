@@ -493,6 +493,113 @@ export default function Hero() {
 
 </section>
 
+<section className="py-28 bg-white overflow-hidden">
+
+  <div className="max-w-7xl mx-auto px-6 lg:px-10">
+
+    <div className="text-center mb-16">
+
+      <p className="uppercase tracking-[5px] text-[#0D6EFD] font-semibold mb-3">
+        Trusted Technology Partners
+      </p>
+
+      <h2 className="text-5xl font-black text-[#081B33]">
+        Working With Industry Leaders
+      </h2>
+
+      <p className="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">
+        We partner with globally recognized technology vendors to
+        deliver secure, scalable and enterprise-ready solutions.
+      </p>
+
+    </div>
+
+  </div>
+
+  {/* Moving Logos */}
+
+  <div className="relative">
+
+    <div className="flex animate-marquee whitespace-nowrap gap-24">
+
+      {[
+        "cisco.png",
+        "microsoft.png",
+        "aws.png",
+        "dell.png",
+        "huawei.png",
+        "vmware.jpg",
+
+        
+
+      ].map((logo, index) => (
+
+        <div
+          key={index}
+          className="flex items-center justify-center min-w-[180px]"
+        >
+
+          <img
+            src={`/images/${logo}`}
+            className="h-16 object-contain"
+          />
+
+        </div>
+
+      ))}
+
+    </div>
+
+  </div>
+
+</section>
+
+{/* CTA */}
+
+<section className="py-24 bg-white">
+
+  <div className="max-w-5xl mx-auto px-6 text-center">
+
+    <p className="uppercase tracking-[5px] text-[#0D6EFD] font-semibold mb-4">
+      Ready to Get Started?
+    </p>
+
+    <h2 className="text-5xl lg:text-6xl font-black text-[#081B33] leading-tight mb-8">
+      Let's Build a Smarter,
+      <br />
+      More Secure IT Infrastructure
+    </h2>
+
+    <p className="text-xl text-gray-600 leading-9 max-w-3xl mx-auto mb-12">
+
+      Whether you're modernizing your network, securing your business,
+      migrating to the cloud or planning your next digital transformation,
+      our experts are ready to help you every step of the way.
+
+    </p>
+
+    <div className="flex flex-wrap justify-center gap-5">
+
+      <Link
+        href="/networks/contact"
+        className="bg-[#0D6EFD] text-white px-9 py-4 rounded-full font-semibold hover:bg-blue-700 transition duration-300"
+      >
+        Talk to an Expert
+      </Link>
+
+      <Link
+        href="/networks/solutions"
+        className="border-2 border-[#081B33] text-[#081B33] px-9 py-4 rounded-full font-semibold hover:bg-[#081B33] hover:text-white transition duration-300"
+      >
+        Explore Solutions
+      </Link>
+
+    </div>
+
+  </div>
+
+</section>
+
       </div>
 
     </section>
