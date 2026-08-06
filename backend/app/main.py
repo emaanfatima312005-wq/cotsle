@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import text
 from app.database import Base, engine
 import app.models
@@ -12,6 +13,15 @@ Base.metadata.create_all(bind=engine)
 app = FastAPI(
     title="COTSLE API",
     version="1.0.0"
+)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:3000"
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 app.include_router(contact.router)
 app.include_router(systems_ai.router)
