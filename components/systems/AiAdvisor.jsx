@@ -29,7 +29,7 @@ export default function AiAdvisor() {
       title: "AI Chat Assistant",
       description:
         "Ask questions about courses, technologies, and learning opportunities.",
-      link: "/systems/ai-advisor/chat",
+      link: "/systems/ai-advisor/chatbot",
     },
   ];
 
