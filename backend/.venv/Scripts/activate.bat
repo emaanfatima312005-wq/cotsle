@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set "VIRTUAL_ENV=D:\TAYYABA BSSE\INTERNSHIP\CORVIT COTSLE\corvit-cotsle-web\cotsle\backend\.venv"
+set "VIRTUAL_ENV=C:\Users\Administrator\cotsle\backend\.venv"
 
 if not defined PROMPT set PROMPT=$P$G
 

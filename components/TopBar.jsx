@@ -32,7 +32,7 @@ export default function TopBar() {
 
             <Link
               href="#"
-              className="w-9 h-9 border border-gray-300 rounded-full flex items-center justify-center hover:bg-[#0D6EFD] hover:text-white hover:border-[#0D6EFD] transition-all duration-300"
+              className="w-9 h-9 border border-gray-700 rounded-full flex items-center justify-center hover:bg-[#0D6EFD] hover:text-white hover:border-[#0D6EFD] transition-all duration-300"
             >
               <FaInstagram />
             </Link>
