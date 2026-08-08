@@ -26,7 +26,6 @@ export default function Navbar() {
   const navLinks = [
     { name: "Home", href: "/systems" },
     { name: "Courses", href: "/systems/courses" },
-    { name: "Services", href: "/systems/services" }, // ✅ Added
     { name: "About", href: "/systems/about" },
     { name: "Blog", href: "/systems/blog" },
     { name: "AI Advisor", href: "/systems/ai-advisor" },

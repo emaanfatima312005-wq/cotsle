@@ -23,6 +23,8 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
+    { name: "Home",
+      href: "/networks" },
     {
       name: "Solutions",
       href: "/networks/solutions",
