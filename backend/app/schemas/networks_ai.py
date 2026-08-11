@@ -17,3 +17,6 @@ class TechStackAdvisorRequest(BaseModel):
 
 class PromptRequest(BaseModel):
     prompt: str
+
+class ChatRequest(BaseModel):
+    question: str
