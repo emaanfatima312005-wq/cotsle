@@ -1,29 +1,106 @@
+"use client";
+
+import { useState } from "react";
+
 export default function ConsultingContactPage() {
+  const [formData, setFormData] = useState({
+    full_name: "",
+    email: "",
+    phone_number: "",
+    subject: "",
+    message: "",
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormData((previous) => ({
+      ...previous,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    setIsSubmitting(true);
+    setSuccessMessage("");
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("http://127.0.0.1:8000/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          division: "consulting",
+          full_name: formData.full_name,
+          email: formData.email,
+          phone_number: formData.phone_number,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(
+          data?.detail || "Failed to submit your inquiry."
+        );
+      }
+
+      setSuccessMessage(
+        "Your message has been submitted successfully. Our team will get back to you soon."
+      );
+
+      setFormData({
+        full_name: "",
+        email: "",
+        phone_number: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Contact form error:", error);
+
+      setErrorMessage(
+        error.message ||
+          "Something went wrong. Please try again later."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <>
       {/* ============================= */}
       {/* Contact Hero */}
       {/* ============================= */}
 
-      <section className="relative overflow-hidden bg-[#081B33] text-white py-24 lg:py-32">
-
-        {/* Background Glows */}
+      <section className="relative overflow-hidden bg-[#081B33] py-24 text-white lg:py-32">
 
         <div
           data-aos="zoom-in"
           data-aos-duration="1500"
-          className="absolute -top-48 -right-48 w-[600px] h-[600px] bg-[#0D6EFD]/20 rounded-full blur-[140px]"
+          className="absolute -right-48 -top-48 h-[600px] w-[600px] rounded-full bg-[#0D6EFD]/20 blur-[140px]"
         />
 
         <div
           data-aos="zoom-in"
           data-aos-duration="1500"
-          className="absolute -bottom-48 -left-48 w-[500px] h-[500px] bg-[#0D6EFD]/10 rounded-full blur-[130px]"
+          className="absolute -bottom-48 -left-48 h-[500px] w-[500px] rounded-full bg-[#0D6EFD]/10 blur-[130px]"
         />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-10">
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid items-center gap-16 lg:grid-cols-2">
 
             {/* Left */}
 
@@ -31,7 +108,7 @@ export default function ConsultingContactPage() {
 
               <p
                 data-aos="fade-down"
-                className="uppercase tracking-[6px] text-[#0D6EFD] font-semibold mb-6"
+                className="mb-6 uppercase tracking-[6px] font-semibold text-[#0D6EFD]"
               >
                 Contact COTSLE Consulting
               </p>
@@ -39,7 +116,7 @@ export default function ConsultingContactPage() {
               <h1
                 data-aos="fade-right"
                 data-aos-delay="150"
-                className="text-6xl md:text-7xl lg:text-8xl font-black leading-[0.95]"
+                className="text-6xl font-black leading-[0.95] md:text-7xl lg:text-8xl"
               >
                 Let's
                 <br />
@@ -52,7 +129,7 @@ export default function ConsultingContactPage() {
               <p
                 data-aos="fade-up"
                 data-aos-delay="300"
-                className="mt-8 text-xl text-gray-300 leading-9 max-w-xl"
+                className="mt-8 max-w-xl text-xl leading-9 text-gray-300"
               >
                 Whether you need strategic guidance, technology
                 expertise, training, or support with a business
@@ -61,53 +138,47 @@ export default function ConsultingContactPage() {
 
             </div>
 
-
             {/* Right */}
 
-<div
-  data-aos="fade-left"
-  data-aos-delay="300"
-  className="hidden lg:block"
->
-  <div className="relative w-full max-w-[520px] ml-auto">
+            <div
+              data-aos="fade-left"
+              data-aos-delay="300"
+              className="hidden lg:block"
+            >
 
-    {/* Image */}
+              <div className="relative ml-auto w-full max-w-[520px]">
 
-    <div className="relative h-[480px] overflow-hidden rounded-3xl shadow-2xl">
+                <div className="relative h-[480px] overflow-hidden rounded-3xl shadow-2xl">
 
-      <img
-        src="/images/contact.png"
-        alt="COTSLE Consulting"
-        className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-      />
+                  <img
+                    src="/images/contact.png"
+                    alt="COTSLE Consulting"
+                    className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                  />
 
-      {/* Dark overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#081B33]/60 via-transparent to-transparent" />
 
-      <div className="absolute inset-0 bg-gradient-to-t from-[#081B33]/60 via-transparent to-transparent" />
+                </div>
 
-    </div>
+                <div
+                  data-aos="fade-up"
+                  data-aos-delay="600"
+                  className="absolute -bottom-8 -left-8 rounded-2xl bg-[#0D6EFD] px-7 py-6 text-white shadow-xl"
+                >
 
+                  <p className="text-3xl font-black">
+                    Let's
+                  </p>
 
-    {/* Floating Blue Card */}
+                  <p className="mt-1 text-sm uppercase tracking-[3px]">
+                    Start Something Great
+                  </p>
 
-    <div
-      data-aos="fade-up"
-      data-aos-delay="600"
-      className="absolute -bottom-8 -left-8 bg-[#0D6EFD] text-white px-7 py-6 rounded-2xl shadow-xl"
-    >
+                </div>
 
-      <p className="text-3xl font-black">
-        Let's
-      </p>
+              </div>
 
-      <p className="text-sm uppercase tracking-[3px] mt-1">
-        Start Something Great
-      </p>
-
-    </div>
-
-  </div>
-</div>
+            </div>
 
           </div>
 
@@ -115,26 +186,25 @@ export default function ConsultingContactPage() {
 
       </section>
 
-
       {/* ============================= */}
       {/* Contact Information + Form */}
       {/* ============================= */}
 
-      <section className="py-28 bg-[#F8FAFC]">
+      <section className="bg-[#F8FAFC] py-28">
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
 
-          <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-16">
+          <div className="grid gap-16 lg:grid-cols-[0.8fr_1.2fr]">
 
             {/* Contact Information */}
 
             <div data-aos="fade-right">
 
-              <p className="uppercase tracking-[5px] text-[#0D6EFD] font-semibold mb-5">
+              <p className="mb-5 uppercase tracking-[5px] font-semibold text-[#0D6EFD]">
                 Get In Touch
               </p>
 
-              <h2 className="text-5xl font-black text-[#081B33] leading-tight">
+              <h2 className="text-5xl font-black leading-tight text-[#081B33]">
                 Start a
                 <br />
 
@@ -143,15 +213,14 @@ export default function ConsultingContactPage() {
                 </span>
               </h2>
 
-              <p className="mt-6 text-lg text-gray-600 leading-8">
+              <p className="mt-6 text-lg leading-8 text-gray-600">
                 Tell us what you're working on, what challenge
                 you're facing, or where you need support.
               </p>
 
-
-              {/* Contact Details */}
-
               <div className="mt-12 space-y-7">
+
+                {/* Email */}
 
                 <div
                   data-aos="fade-up"
@@ -159,22 +228,25 @@ export default function ConsultingContactPage() {
                   className="flex gap-5"
                 >
 
-                  <div className="w-12 h-12 shrink-0 rounded-xl bg-[#0D6EFD]/10 flex items-center justify-center text-[#0D6EFD] text-xl">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#0D6EFD]/10 text-xl text-[#0D6EFD]">
                     ✉
                   </div>
 
                   <div>
-                    <p className="text-sm uppercase tracking-wider text-gray-400 font-semibold">
+
+                    <p className="text-sm font-semibold uppercase tracking-wider text-gray-400">
                       Email
                     </p>
 
                     <p className="mt-1 text-lg font-semibold text-[#081B33]">
                       consulting@cotsle.com
                     </p>
+
                   </div>
 
                 </div>
 
+                {/* Phone */}
 
                 <div
                   data-aos="fade-up"
@@ -182,22 +254,25 @@ export default function ConsultingContactPage() {
                   className="flex gap-5"
                 >
 
-                  <div className="w-12 h-12 shrink-0 rounded-xl bg-[#0D6EFD]/10 flex items-center justify-center text-[#0D6EFD] text-xl">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#0D6EFD]/10 text-xl text-[#0D6EFD]">
                     ☎
                   </div>
 
                   <div>
-                    <p className="text-sm uppercase tracking-wider text-gray-400 font-semibold">
+
+                    <p className="text-sm font-semibold uppercase tracking-wider text-gray-400">
                       Phone
                     </p>
 
                     <p className="mt-1 text-lg font-semibold text-[#081B33]">
                       +92 XXX XXXXXXX
                     </p>
+
                   </div>
 
                 </div>
 
+                {/* Location */}
 
                 <div
                   data-aos="fade-up"
@@ -205,18 +280,20 @@ export default function ConsultingContactPage() {
                   className="flex gap-5"
                 >
 
-                  <div className="w-12 h-12 shrink-0 rounded-xl bg-[#0D6EFD]/10 flex items-center justify-center text-[#0D6EFD] text-xl">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#0D6EFD]/10 text-xl text-[#0D6EFD]">
                     📍
                   </div>
 
                   <div>
-                    <p className="text-sm uppercase tracking-wider text-gray-400 font-semibold">
+
+                    <p className="text-sm font-semibold uppercase tracking-wider text-gray-400">
                       Location
                     </p>
 
                     <p className="mt-1 text-lg font-semibold text-[#081B33]">
                       Pakistan
                     </p>
+
                   </div>
 
                 </div>
@@ -225,12 +302,13 @@ export default function ConsultingContactPage() {
 
             </div>
 
-
+            {/* ============================= */}
             {/* Contact Form */}
+            {/* ============================= */}
 
             <div
               data-aos="fade-left"
-              className="bg-white rounded-3xl p-8 lg:p-12 border border-gray-200 shadow-sm"
+              className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm lg:p-12"
             >
 
               <h3 className="text-3xl font-black text-[#081B33]">
@@ -241,26 +319,33 @@ export default function ConsultingContactPage() {
                 Fill out the form and our team will get back to you.
               </p>
 
+              <form
+                onSubmit={handleSubmit}
+                className="mt-8 space-y-6"
+              >
 
-              <form className="mt-8 space-y-6">
-
-                {/* Name */}
+                {/* Full Name */}
 
                 <div
                   data-aos="fade-up"
                   data-aos-delay="100"
                 >
-                  <label className="block text-sm font-semibold text-[#081B33] mb-2">
+
+                  <label className="mb-2 block text-sm font-semibold text-[#081B33]">
                     Full Name
                   </label>
 
                   <input
                     type="text"
+                    name="full_name"
+                    value={formData.full_name}
+                    onChange={handleChange}
                     placeholder="Your name"
-                    className="w-full px-5 py-4 rounded-xl border border-gray-200 outline-none focus:border-[#0D6EFD] focus:ring-2 focus:ring-[#0D6EFD]/10 transition-all"
+                    required
+                    className="w-full rounded-xl border border-gray-200 px-5 py-4 outline-none transition-all focus:border-[#0D6EFD] focus:ring-2 focus:ring-[#0D6EFD]/10"
                   />
-                </div>
 
+                </div>
 
                 {/* Email */}
 
@@ -268,17 +353,45 @@ export default function ConsultingContactPage() {
                   data-aos="fade-up"
                   data-aos-delay="150"
                 >
-                  <label className="block text-sm font-semibold text-[#081B33] mb-2">
+
+                  <label className="mb-2 block text-sm font-semibold text-[#081B33]">
                     Email Address
                   </label>
 
                   <input
                     type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder="you@example.com"
-                    className="w-full px-5 py-4 rounded-xl border border-gray-200 outline-none focus:border-[#0D6EFD] focus:ring-2 focus:ring-[#0D6EFD]/10 transition-all"
+                    required
+                    className="w-full rounded-xl border border-gray-200 px-5 py-4 outline-none transition-all focus:border-[#0D6EFD] focus:ring-2 focus:ring-[#0D6EFD]/10"
                   />
+
                 </div>
 
+                {/* Phone */}
+
+                <div
+                  data-aos="fade-up"
+                  data-aos-delay="175"
+                >
+
+                  <label className="mb-2 block text-sm font-semibold text-[#081B33]">
+                    Phone Number
+                  </label>
+
+                  <input
+                    type="tel"
+                    name="phone_number"
+                    value={formData.phone_number}
+                    onChange={handleChange}
+                    placeholder="+92 XXX XXXXXXX"
+                    required
+                    className="w-full rounded-xl border border-gray-200 px-5 py-4 outline-none transition-all focus:border-[#0D6EFD] focus:ring-2 focus:ring-[#0D6EFD]/10"
+                  />
+
+                </div>
 
                 {/* Subject */}
 
@@ -286,17 +399,22 @@ export default function ConsultingContactPage() {
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >
-                  <label className="block text-sm font-semibold text-[#081B33] mb-2">
+
+                  <label className="mb-2 block text-sm font-semibold text-[#081B33]">
                     Subject
                   </label>
 
                   <input
                     type="text"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
                     placeholder="How can we help?"
-                    className="w-full px-5 py-4 rounded-xl border border-gray-200 outline-none focus:border-[#0D6EFD] focus:ring-2 focus:ring-[#0D6EFD]/10 transition-all"
+                    required
+                    className="w-full rounded-xl border border-gray-200 px-5 py-4 outline-none transition-all focus:border-[#0D6EFD] focus:ring-2 focus:ring-[#0D6EFD]/10"
                   />
-                </div>
 
+                </div>
 
                 {/* Message */}
 
@@ -304,17 +422,38 @@ export default function ConsultingContactPage() {
                   data-aos="fade-up"
                   data-aos-delay="250"
                 >
-                  <label className="block text-sm font-semibold text-[#081B33] mb-2">
+
+                  <label className="mb-2 block text-sm font-semibold text-[#081B33]">
                     Message
                   </label>
 
                   <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     rows="5"
                     placeholder="Tell us about your requirements..."
-                    className="w-full px-5 py-4 rounded-xl border border-gray-200 outline-none resize-none focus:border-[#0D6EFD] focus:ring-2 focus:ring-[#0D6EFD]/10 transition-all"
+                    required
+                    className="w-full resize-none rounded-xl border border-gray-200 px-5 py-4 outline-none transition-all focus:border-[#0D6EFD] focus:ring-2 focus:ring-[#0D6EFD]/10"
                   />
+
                 </div>
 
+                {/* Success */}
+
+                {successMessage && (
+                  <div className="rounded-xl border border-green-200 bg-green-50 px-5 py-4 text-sm font-medium text-green-700">
+                    ✓ {successMessage}
+                  </div>
+                )}
+
+                {/* Error */}
+
+                {errorMessage && (
+                  <div className="rounded-xl border border-red-200 bg-red-50 px-5 py-4 text-sm font-medium text-red-700">
+                    ✕ {errorMessage}
+                  </div>
+                )}
 
                 {/* Submit */}
 
@@ -322,9 +461,12 @@ export default function ConsultingContactPage() {
                   data-aos="fade-up"
                   data-aos-delay="300"
                   type="submit"
-                  className="w-full bg-[#0D6EFD] text-white py-4 rounded-xl font-semibold hover:bg-blue-700 hover:-translate-y-1 transition-all duration-300"
+                  disabled={isSubmitting}
+                  className="w-full rounded-xl bg-[#0D6EFD] py-4 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-60"
                 >
-                  Send Message →
+                  {isSubmitting
+                    ? "Sending..."
+                    : "Send Message →"}
                 </button>
 
               </form>
@@ -337,31 +479,30 @@ export default function ConsultingContactPage() {
 
       </section>
 
-
       {/* ============================= */}
       {/* Location Section */}
       {/* ============================= */}
 
-      <section className="py-24 bg-white">
+      <section className="bg-white py-24">
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
 
           <div
             data-aos="fade-up"
-            className="rounded-3xl bg-[#081B33] text-white p-10 lg:p-16 relative overflow-hidden"
+            className="relative overflow-hidden rounded-3xl bg-[#081B33] p-10 text-white lg:p-16"
           >
 
-            <div className="absolute -right-32 -top-32 w-96 h-96 bg-[#0D6EFD]/20 rounded-full blur-[100px]" />
+            <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-[#0D6EFD]/20 blur-[100px]" />
 
-            <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative z-10 grid items-center gap-12 lg:grid-cols-2">
 
               <div>
 
-                <p className="uppercase tracking-[5px] text-[#0D6EFD] font-semibold mb-5">
+                <p className="mb-5 uppercase tracking-[5px] font-semibold text-[#0D6EFD]">
                   Our Location
                 </p>
 
-                <h2 className="text-4xl lg:text-5xl font-black">
+                <h2 className="text-4xl font-black lg:text-5xl">
                   Let's Connect
                   <br />
 
@@ -370,7 +511,7 @@ export default function ConsultingContactPage() {
                   </span>
                 </h2>
 
-                <p className="mt-6 text-gray-300 leading-8 max-w-lg">
+                <p className="mt-6 max-w-lg leading-8 text-gray-300">
                   Visit us to discuss your requirements, explore
                   opportunities, or simply learn more about how
                   COTSLE Consulting can support your organization.
@@ -378,11 +519,10 @@ export default function ConsultingContactPage() {
 
               </div>
 
-
               <div
                 data-aos="zoom-in"
                 data-aos-delay="250"
-                className="h-64 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center"
+                className="flex h-64 items-center justify-center rounded-2xl border border-white/10 bg-white/5"
               >
 
                 <div className="text-center">
@@ -411,23 +551,22 @@ export default function ConsultingContactPage() {
 
       </section>
 
-
       {/* ============================= */}
       {/* Final CTA */}
       {/* ============================= */}
 
-      <section className="py-24 bg-[#F8FAFC]">
+      <section className="bg-[#F8FAFC] py-24">
 
         <div
           data-aos="fade-up"
-          className="max-w-4xl mx-auto px-6 text-center"
+          className="mx-auto max-w-4xl px-6 text-center"
         >
 
-          <p className="uppercase tracking-[5px] text-[#0D6EFD] font-semibold mb-5">
+          <p className="mb-5 uppercase tracking-[5px] font-semibold text-[#0D6EFD]">
             COTSLE Consulting
           </p>
 
-          <h2 className="text-5xl lg:text-6xl font-black text-[#081B33]">
+          <h2 className="text-5xl font-black text-[#081B33] lg:text-6xl">
             Have a Challenge?
             <br />
 
@@ -436,7 +575,7 @@ export default function ConsultingContactPage() {
             </span>
           </h2>
 
-          <p className="mt-6 text-lg text-gray-600 leading-8 max-w-2xl mx-auto">
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">
             From strategy and technology to training and
             transformation, we're here to help you move forward.
           </p>
