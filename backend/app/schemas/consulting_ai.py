@@ -18,4 +18,4 @@ class TransformationRoadmapRequest(BaseModel):
 
 
 class PromptRequest(BaseModel):
-    prompt: str
+    prompt:str

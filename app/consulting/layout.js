@@ -1,5 +1,6 @@
 import ConsultingNavbar from "@/components/consulting/ConsultingNavbar";
 import ConsultingFooter from "@/components/consulting/ConsultingFooter";
+import ConsultingAIAssistant from "@/components/consulting/ConsultingAIAssistant";
 
 export default function ConsultingLayout({ children }) {
   return (
@@ -10,7 +11,10 @@ export default function ConsultingLayout({ children }) {
         {children}
       </main>
 
-      <ConsultingFooter /> 
+      <ConsultingFooter />
+
+      {/* Consulting AI Assistant - appears throughout Consulting */}
+      <ConsultingAIAssistant />
     </>
   );
 }
