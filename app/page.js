@@ -177,7 +177,7 @@ export default function Home() {
       </p>
 
       <h2 className="mt-2 text-4xl font-black text-white">
-        SYSTEMS
+        INSTITUTE
       </h2>
 
       <p className="mt-5 text-gray-300 leading-7">
@@ -216,7 +216,7 @@ export default function Home() {
       </p>
 
       <h2 className="mt-2 text-4xl font-black text-white">
-        NETWORKS
+        SERVICES
       </h2>
 
       <p className="mt-5 text-gray-300 leading-7">
@@ -256,7 +256,7 @@ export default function Home() {
       </p>
 
       <h2 className="mt-2 text-4xl font-black text-white">
-        CONSULTING
+        ADVISORY
       </h2>
 
       <p className="mt-5 text-gray-300 leading-7">

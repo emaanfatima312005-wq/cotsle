@@ -92,7 +92,7 @@ export default function ConsultingCareersPage() {
               <div className="relative h-[430px] lg:h-[560px] rounded-[2rem] overflow-hidden">
 
                 <img
-                  src="/images/consulting-careers.jpg"
+                  src="/images/careers.jpg"
                   alt="Careers at COTSLE"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />

@@ -633,10 +633,6 @@ export default function NetworkAIAssistant() {
                       Have a conversation with our AI about the best
                       technologies for your project.
                     </p>
-
-                    <div className="mt-3 inline-flex rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1 text-xs text-blue-400">
-                      Interactive AI
-                    </div>
                   </button>
 
                 </div>

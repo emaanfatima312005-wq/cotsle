@@ -85,7 +85,7 @@ export default function Insights() {
       <div className="relative overflow-hidden rounded-3xl bg-[#081B33]">
 
         <Image
-          src="/images/insights-featured.png"
+          src="/images/security.jpg"
           alt="Technology insights"
           width={700}
           height={500}
@@ -112,13 +112,6 @@ export default function Insights() {
           and build a proactive approach to protecting their digital
           infrastructure.
         </p>
-
-        <Link
-          href="#"
-          className="inline-flex items-center gap-2 text-[#0D6EFD] font-semibold hover:gap-4 transition-all"
-        >
-          Read Featured Insight →
-        </Link>
 
       </div>
 
@@ -157,7 +150,7 @@ export default function Insights() {
       <article className="bg-white rounded-3xl overflow-hidden border border-gray-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
 
         <Image
-          src="/images/insight-cybersecurity.png"
+          src="/images/Cyber_security.jpg"
           alt="Cybersecurity"
           width={600}
           height={380}
@@ -179,13 +172,6 @@ export default function Insights() {
             as technology and cyber threats continue to evolve.
           </p>
 
-          <Link
-            href="#"
-            className="font-semibold text-[#0D6EFD]"
-          >
-            Read More →
-          </Link>
-
         </div>
 
       </article>
@@ -195,7 +181,7 @@ export default function Insights() {
       <article className="bg-white rounded-3xl overflow-hidden border border-gray-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
 
         <Image
-          src="/images/insight-cloud.png"
+          src="/images/Cloud_computing.jpg"
           alt="Cloud infrastructure"
           width={600}
           height={380}
@@ -217,13 +203,6 @@ export default function Insights() {
             moving workloads and applications to the cloud.
           </p>
 
-          <Link
-            href="#"
-            className="font-semibold text-[#0D6EFD]"
-          >
-            Read More →
-          </Link>
-
         </div>
 
       </article>
@@ -233,7 +212,7 @@ export default function Insights() {
       <article className="bg-white rounded-3xl overflow-hidden border border-gray-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
 
         <Image
-          src="/images/insight-ai.png"
+          src="/images/AI.jpg"
           alt="Artificial Intelligence"
           width={600}
           height={380}
@@ -254,13 +233,6 @@ export default function Insights() {
             Discover how organizations are using AI to automate
             processes, improve decisions, and create new opportunities.
           </p>
-
-          <Link
-            href="#"
-            className="font-semibold text-[#0D6EFD]"
-          >
-            Read More →
-          </Link>
 
         </div>
 

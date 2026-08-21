@@ -41,7 +41,7 @@ export default function Footer() {
                 </h2>
 
                 <p className="uppercase tracking-[3px] text-[#0D6EFD] text-sm">
-                  NETWORKS
+                  Services
                 </p>
 
               </div>

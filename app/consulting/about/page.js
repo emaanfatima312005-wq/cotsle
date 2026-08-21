@@ -471,10 +471,6 @@ export default function ConsultingAboutPage() {
 
         </div>
 
-        <span className="text-2xl text-gray-400 group-hover:text-[#0D6EFD] transition-colors">
-          →
-        </span>
-
       </div>
 
 
@@ -501,10 +497,6 @@ export default function ConsultingAboutPage() {
           </p>
 
         </div>
-
-        <span className="text-2xl text-gray-400 group-hover:text-[#0D6EFD] transition-colors">
-          →
-        </span>
 
       </div>
 
@@ -533,10 +525,6 @@ export default function ConsultingAboutPage() {
 
         </div>
 
-        <span className="text-2xl text-gray-400 group-hover:text-[#0D6EFD] transition-colors">
-          →
-        </span>
-
       </div>
 
 
@@ -563,10 +551,6 @@ export default function ConsultingAboutPage() {
           </p>
 
         </div>
-
-        <span className="text-2xl text-gray-400 group-hover:text-[#0D6EFD] transition-colors">
-          →
-        </span>
 
       </div>
 

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function CloudComputingPage() {
+export default function PMPPage() {
   return (
     <>
       {/* Hero */}
@@ -10,7 +10,7 @@ export default function CloudComputingPage() {
 
         <div className="absolute inset-0 opacity-10">
           <Image
-            src="/images/cloud.png"
+            src="/images/pmp.jpg"
             alt=""
             fill
             className="object-cover"
@@ -29,15 +29,15 @@ export default function CloudComputingPage() {
 
               <h1 className="text-5xl lg:text-6xl font-black leading-tight">
 
-                Cloud Computing
+                Project Management (PMP)
 
               </h1>
 
               <p className="mt-8 text-lg text-gray-300 leading-8 max-w-xl">
 
-                Master AWS, Microsoft Azure, cloud infrastructure, virtualization,
-                containers, and modern deployment practices to build scalable
-                cloud-based solutions.
+                Develop professional project management skills and learn how
+                to plan, execute, monitor and successfully deliver projects
+                using industry-standard project management practices.
 
               </p>
 
@@ -64,20 +64,17 @@ export default function CloudComputingPage() {
             <div className="relative flex justify-center items-center">
 
               {/* Glow */}
-
               <div className="absolute h-[420px] w-[420px] rounded-full bg-[#0D6EFD]/10 blur-[120px]" />
 
               {/* Floating background square */}
-
               <div className="absolute h-[520px] w-[420px] rounded-[40px] bg-gradient-to-br from-[#0D6EFD]/10 to-transparent rotate-6" />
 
               {/* Main Card */}
-
               <div className="relative rounded-[32px] bg-white p-5 shadow-[0_30px_80px_rgba(13,110,253,0.18)]">
 
                 <Image
-                  src="/images/Cloud_computing.jpg"
-                  alt="Cloud Computing"
+                  src="/images/pmp.png"
+                  alt="Project Management"
                   width={600}
                   height={600}
                   className="rounded-[24px]"
@@ -122,7 +119,6 @@ export default function CloudComputingPage() {
 
       </section>
 
-
       {/* About Course */}
 
       <section className="py-24 bg-white">
@@ -140,31 +136,25 @@ export default function CloudComputingPage() {
               </p>
 
               <h2 className="text-5xl font-black text-gray-900 leading-tight mb-8">
-
-                Master Cloud Computing
-
+                Master Project Management
                 <span className="block text-[#0D6EFD]">
-                  Deploy Applications at Scale
+                  Lead Projects With Confidence
                 </span>
-
               </h2>
 
               <p className="text-gray-600 text-lg leading-8 mb-6">
-
-                Cloud computing has transformed how businesses build and manage
-                technology infrastructure. This course introduces students to
-                cloud platforms, virtualization, and scalable deployment using
-                today's leading cloud technologies.
+                Effective project management is essential for organizations
+                to successfully plan, execute and deliver projects. This
+                course introduces students to professional project management
+                principles, methodologies and practices used across industries.
 
               </p>
 
               <p className="text-gray-600 text-lg leading-8">
-
-                Throughout the training, students will gain hands-on experience
-                with AWS, Microsoft Azure, Docker, Kubernetes, and cloud
-                deployment while building practical cloud-based solutions for
-                real-world business environments.
-
+                Throughout the training, students will learn project planning,
+                scheduling, risk management, budgeting, stakeholder management
+                and project execution while developing practical skills needed
+                to manage real-world projects successfully.
               </p>
 
             </div>
@@ -176,11 +166,11 @@ export default function CloudComputingPage() {
               <div className="rounded-2xl border border-gray-200 p-6 hover:shadow-xl transition">
 
                 <h3 className="text-xl font-bold text-gray-900">
-                  AWS & Azure
+                  Project Planning
                 </h3>
 
                 <p className="mt-3 text-gray-600">
-                  Cloud Deployment
+                  Planning & Scheduling
                 </p>
 
               </div>
@@ -188,12 +178,12 @@ export default function CloudComputingPage() {
               <div className="rounded-2xl border border-gray-200 p-6 hover:shadow-xl transition">
 
                 <h3 className="text-xl font-bold text-gray-900">
-                  Enterprise Infrastructure
+                  Risk & Stakeholder Management
                 </h3>
 
                 <p className="mt-3 text-gray-600">
-                  Learn directly from professionals working in the technology
-                  industry.
+                  Learn how to identify project risks and effectively manage
+                  project stakeholders.
                 </p>
 
               </div>
@@ -205,8 +195,8 @@ export default function CloudComputingPage() {
                 </h3>
 
                 <p className="mt-3 text-gray-600">
-                  Prepare for internships, freelance work and full-time cloud
-                  computing careers.
+                  Prepare for professional project management roles and
+                  certification pathways.
                 </p>
 
               </div>
@@ -218,7 +208,6 @@ export default function CloudComputingPage() {
         </div>
 
       </section>
-
 
       {/* Course Details */}
 
@@ -265,7 +254,7 @@ export default function CloudComputingPage() {
 
                 <div className="flex justify-between border-b pb-4">
                   <span className="font-semibold">Prerequisites</span>
-                  <span>Basic Computer Skills</span>
+                  <span>Basic Project Knowledge</span>
                 </div>
 
                 <div className="flex justify-between">
@@ -277,7 +266,6 @@ export default function CloudComputingPage() {
 
             </div>
 
-
             <div className="bg-white rounded-2xl shadow-lg p-8">
 
               <h3 className="text-2xl font-bold mb-8">
@@ -287,14 +275,14 @@ export default function CloudComputingPage() {
               <div className="grid grid-cols-2 gap-4">
 
                 {[
-                  "Cloud Engineer",
-                  "AWS Engineer",
-                  "Azure Administrator",
-                  "DevOps Engineer",
-                  "Cloud Consultant",
-                  "Infrastructure Engineer",
-                  "Solutions Architect",
-                  "Cloud Support Engineer",
+                  "Project Manager",
+                  "Project Coordinator",
+                  "Program Manager",
+                  "Project Analyst",
+                  "Operations Manager",
+                  "Scrum Master",
+                  "Project Consultant",
+                  "PMO Analyst",
                 ].map((job) => (
 
                   <div
@@ -316,9 +304,6 @@ export default function CloudComputingPage() {
 
       </section>
 
-
-      {/* Course Curriculum */}
-
       <section className="py-24 bg-white">
 
         <div className="max-w-7xl mx-auto px-6">
@@ -336,42 +321,42 @@ export default function CloudComputingPage() {
             <div className="rounded-2xl border p-8">
               <h3 className="font-bold text-2xl">Module 1</h3>
               <p className="mt-3 text-gray-600">
-                Cloud Fundamentals
+                Project Management Fundamentals
               </p>
             </div>
 
             <div className="rounded-2xl border p-8">
               <h3 className="font-bold text-2xl">Module 2</h3>
               <p className="mt-3 text-gray-600">
-                AWS
+                Project Planning & Scheduling
               </p>
             </div>
 
             <div className="rounded-2xl border p-8">
               <h3 className="font-bold text-2xl">Module 3</h3>
               <p className="mt-3 text-gray-600">
-                Microsoft Azure
+                Project Scope & Resource Management
               </p>
             </div>
 
             <div className="rounded-2xl border p-8">
               <h3 className="font-bold text-2xl">Module 4</h3>
               <p className="mt-3 text-gray-600">
-                Docker & Containers
+                Risk & Quality Management
               </p>
             </div>
 
             <div className="rounded-2xl border p-8">
               <h3 className="font-bold text-2xl">Module 5</h3>
               <p className="mt-3 text-gray-600">
-                Kubernetes
+                Stakeholder & Communication Management
               </p>
             </div>
 
             <div className="rounded-2xl border p-8">
               <h3 className="font-bold text-2xl">Final Project</h3>
               <p className="mt-3 text-gray-600">
-                Cloud Deployment
+                Complete Project Management Plan
               </p>
             </div>
 
@@ -380,7 +365,6 @@ export default function CloudComputingPage() {
         </div>
 
       </section>
-
 
       {/* CTA */}
 
@@ -393,7 +377,6 @@ export default function CloudComputingPage() {
             {/* Background Glow */}
 
             <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-[#0D6EFD]/10 blur-[120px]" />
-
             <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-[#0D6EFD]/10 blur-[120px]" />
 
             <div className="relative text-center">
@@ -407,11 +390,10 @@ export default function CloudComputingPage() {
               </h2>
 
               <p className="mt-6 max-w-3xl mx-auto text-lg leading-8 text-gray-600">
-
                 Join thousands of students learning the most in-demand
-                technology skills through industry-focused training, practical
-                projects and expert instructors at COTSLE Systems.
-
+                technology and professional skills through industry-focused
+                training, practical projects and expert instructors at
+                COTSLE Systems.
               </p>
 
               {/* Buttons */}
@@ -441,7 +423,6 @@ export default function CloudComputingPage() {
         </div>
 
       </section>
-
     </>
   );
 }

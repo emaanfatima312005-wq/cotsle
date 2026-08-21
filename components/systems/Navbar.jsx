@@ -30,7 +30,7 @@ export default function Navbar() {
     { name: "Blog", href: "/systems/blog" },
     { name: "AI Advisor", href: "/systems/ai-advisor" },
     { name: "Schedules", href: "/systems/schedules" },
-    { name: "AIIMS", href: "/systems/aiims" },
+    { name: "AIMS", href: "/systems/aims" },
   ];
 
   return (
@@ -75,37 +75,37 @@ export default function Navbar() {
 
             {navLinks.map((link) => (
 
-              <li key={link.name}>
-                <Link
-  href={link.href}
-  className={`relative pb-2 transition-all duration-300
+  <li key={link.name}>
+    <Link
+      href={link.href}
+      className={`relative pb-2 transition-all duration-300
 
-    ${
-      pathname === link.href
-        ? "text-[#0D6EFD]"
-        : "text-white hover:text-[#0D6EFD]"
-    }
+        ${
+          pathname === link.href
+            ? "text-[#0D6EFD]"
+            : "text-white hover:text-[#0D6EFD]"
+        }
 
-    after:absolute
-    after:left-0
-    after:-bottom-1
-    after:h-[2px]
-    after:bg-[#0D6EFD]
-    after:transition-all
-    after:duration-300
+        after:absolute
+        after:left-0
+        after:-bottom-1
+        after:h-[2px]
+        after:bg-[#0D6EFD]
+        after:transition-all
+        after:duration-300
 
-    ${
-      pathname === link.href
-        ? "after:w-full"
-        : "after:w-0 hover:after:w-full"
-    }
-  `}
->
-  {link.name}
-</Link>
-              </li>
+        ${
+          pathname === link.href
+            ? "after:w-full"
+            : "after:w-0 hover:after:w-full"
+        }
+      `}
+    >
+      {link.name}
+    </Link>
+  </li>
 
-            ))}
+))}
 
           </ul>
 

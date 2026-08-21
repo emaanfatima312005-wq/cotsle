@@ -90,7 +90,7 @@ export default function ConsultingTrainingsPage() {
               <div className="relative overflow-hidden rounded-[2rem]">
 
                 <img
-                  src="/images/consulting-training.jpg"
+                  src="/images/training.jpg"
                   alt="COTSLE Professional Training"
                   className="w-full h-[420px] lg:h-[520px] object-cover hover:scale-105 transition-transform duration-700"
                 />

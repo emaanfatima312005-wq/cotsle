@@ -57,8 +57,8 @@ export default function ConsultingNavbar() {
     priority
   />
 
- <h1 className="text-3xl font-bold transition-colors duration-300 group-hover:text-[#0D6EFD]">
-  COTSLE
+<h1 className="text-3xl font-bold text-[#0D6EFD] transition-colors duration-300 group-hover:text-[#0D6EFD]">
+  COTSLE 
 </h1>
 
 </Link>
