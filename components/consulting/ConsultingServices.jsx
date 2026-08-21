@@ -98,10 +98,6 @@ export default function ConsultingServices() {
                 {service.description}
               </p>
 
-              <div className="mt-7 text-[#0D6EFD] font-semibold">
-                Learn More →
-              </div>
-
             </div>
 
           ))}

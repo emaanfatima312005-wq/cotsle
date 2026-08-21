@@ -41,7 +41,7 @@ function ConsultingFooter() {
           <div>
 
             <h3 className="text-lg font-bold mb-6">
-              Consulting
+              Advisory
             </h3>
 
             <ul className="space-y-4 text-gray-400">

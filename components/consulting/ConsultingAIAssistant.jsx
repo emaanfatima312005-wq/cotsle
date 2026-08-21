@@ -431,28 +431,6 @@ export default function ConsultingAIAssistant() {
                       Build a practical AI strategy tailored to your business
                       goals and challenges.
                     </p>
-
-                    <span
-                      className="
-                        mt-4
-                        inline-flex
-
-                        rounded-full
-
-                        border
-                        border-blue-500/20
-
-                        bg-blue-500/10
-
-                        px-3
-                        py-1
-
-                        text-xs
-                        text-blue-400
-                      "
-                    >
-                      Guided Form
-                    </span>
                   </button>
 
                   {/* =================================================
@@ -533,28 +511,6 @@ export default function ConsultingAIAssistant() {
                       Discover how prepared your organization is for AI
                       adoption.
                     </p>
-
-                    <span
-                      className="
-                        mt-4
-                        inline-flex
-
-                        rounded-full
-
-                        border
-                        border-blue-500/20
-
-                        bg-blue-500/10
-
-                        px-3
-                        py-1
-
-                        text-xs
-                        text-blue-400
-                      "
-                    >
-                      Guided Form
-                    </span>
                   </button>
 
                   {/* =================================================
@@ -635,28 +591,6 @@ export default function ConsultingAIAssistant() {
                       Have a conversation with our AI consultant about
                       practical AI opportunities for your business.
                     </p>
-
-                    <span
-                      className="
-                        mt-4
-                        inline-flex
-
-                        rounded-full
-
-                        border
-                        border-blue-500/20
-
-                        bg-blue-500/10
-
-                        px-3
-                        py-1
-
-                        text-xs
-                        text-blue-400
-                      "
-                    >
-                      Interactive AI
-                    </span>
                   </button>
 
                   {/* =================================================
@@ -737,28 +671,6 @@ export default function ConsultingAIAssistant() {
                       Create a structured roadmap for your organization's
                       digital and AI transformation.
                     </p>
-
-                    <span
-                      className="
-                        mt-4
-                        inline-flex
-
-                        rounded-full
-
-                        border
-                        border-blue-500/20
-
-                        bg-blue-500/10
-
-                        px-3
-                        py-1
-
-                        text-xs
-                        text-blue-400
-                      "
-                    >
-                      Guided Form
-                    </span>
                   </button>
 
                 </div>
