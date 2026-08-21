@@ -15,42 +15,36 @@ export default function Solutions() {
       title: "Cyber Security",
       description:
         "Protect your organization with advanced threat detection, firewalls, endpoint security and security monitoring.",
-      link: "/networks/solutions/cyber-security",
     },
     {
       icon: <FaCloud />,
       title: "Cloud Solutions",
       description:
         "Design, migrate and manage secure cloud environments using Microsoft Azure, AWS and hybrid infrastructures.",
-      link: "/networks/solutions/cloud",
     },
     {
       icon: <FaNetworkWired />,
       title: "Enterprise Networking",
       description:
         "High-performance LAN, WAN, SD-WAN and wireless networking solutions built for modern businesses.",
-      link: "/networks/solutions/networking",
     },
     {
       icon: <FaServer />,
       title: "Data Center",
       description:
         "Modern server infrastructure, virtualization, storage and disaster recovery for mission-critical systems.",
-      link: "/networks/solutions/datacenter",
     },
     {
       icon: <FaLock />,
       title: "Managed Security",
       description:
         "24/7 monitoring, vulnerability management and incident response through our managed security services.",
-      link: "/networks/mssp",
     },
     {
       icon: <FaDatabase />,
       title: "Backup & Recovery",
       description:
         "Business continuity solutions with automated backup, replication and rapid disaster recovery.",
-      link: "/networks/solutions/backup",
     },
   ];
 
@@ -86,9 +80,8 @@ export default function Solutions() {
 
           {solutions.map((solution) => (
 
-            <Link
+            <div
               key={solution.title}
-              href={solution.link}
               className="group relative overflow-hidden rounded-3xl border border-gray-200 bg-white p-9 transition-all duration-500 hover:-translate-y-3 hover:border-[#0D6EFD] hover:shadow-2xl"
             >
 
@@ -111,16 +104,9 @@ export default function Solutions() {
                 <p className="mt-5 leading-7 text-gray-600">
                   {solution.description}
                 </p>
-
-                <div className="mt-8 flex items-center font-semibold text-[#0D6EFD] transition-all duration-300 group-hover:gap-4 gap-2">
-
-                  Learn More →
-
-                </div>
-
               </div>
 
-            </Link>
+            </div>
 
           ))}
 

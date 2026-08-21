@@ -58,7 +58,7 @@ export default function Hero() {
           <div className="flex justify-center">
 
             <Image
-              src="/images/services-banner.png"
+              src="/images/services_hero.jpg"
               width={650}
               height={500}
               alt="Services"
