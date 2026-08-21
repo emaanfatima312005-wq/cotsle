@@ -466,7 +466,7 @@ export default function AboutPage() {
         <div className="overflow-hidden">
 
           <Image
-            src="/images/team1.jpg"
+            src="/images/faculty_image1.png"
             alt="CEO & Founder"
             width={400}
             height={450}
@@ -496,7 +496,7 @@ export default function AboutPage() {
         <div className="overflow-hidden">
 
           <Image
-            src="/images/team2.jpg"
+            src="/images/faculty_image1.png"
             alt="Lead Developer"
             width={400}
             height={450}
@@ -526,7 +526,7 @@ export default function AboutPage() {
         <div className="overflow-hidden">
 
           <Image
-            src="/images/team3.jpg"
+            src="/images/faculty_image1.png"
             alt="IT Trainer"
             width={400}
             height={450}
@@ -556,7 +556,7 @@ export default function AboutPage() {
         <div className="overflow-hidden">
 
           <Image
-            src="/images/team4.jpg"
+            src="/images/faculty_image1.png"
             alt="Career Advisor"
             width={400}
             height={450}

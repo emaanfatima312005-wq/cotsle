@@ -40,7 +40,7 @@ export default function Footer() {
                 </h2>
 
                 <p className="text-gray-400 text-sm">
-                  Systems
+                  Institute
                 </p>
 
               </div>
