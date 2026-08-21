@@ -262,7 +262,7 @@ export default function Hero() {
       <div className="flex justify-center">
 
         <img
-          src="/images/network-design.svg"
+          src="/images/services_enterprise.jpg"
           alt="Enterprise Network"
           className="w-full max-w-md"
         />
